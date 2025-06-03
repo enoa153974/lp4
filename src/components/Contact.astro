@@ -1,0 +1,52 @@
+---
+import Button from "../components/Button"; 
+---
+<section class="contact">
+    <div class="l-wrapper">
+        <div class="l-container-full position-relative">
+            <Button
+            href="リンク"
+            className="contact__btn position-absolute top-50p left-50p translate-center"
+            variant="secondary"
+            >
+                <span>お問い合わせ</span>
+            </Button>
+            <img src="/assets/image/contact_img.jpg" alt="" class="mb-auto">
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        width: 100%;
+    }
+
+    .hero__text{
+        bottom: 0;
+        width: 25%;
+        height: 18%;
+        font-size: var(--font-size-xl2);
+        border-top-right-radius:32px;
+        border-bottom-left-radius:10px;
+    }
+    @media screen and (width <=47.9375rem) {
+        .hero {
+
+        }
+
+        .hero__inner {
+
+        }
+
+        .font__logo {
+            font-size: 2.5625rem;
+            line-height: 1.2;
+        }
+
+        .hero__text p {
+            margin-top: 0.625rem;
+            font-size: 1.25rem;
+            white-space: nowrap;
+        }
+    }
+</style>

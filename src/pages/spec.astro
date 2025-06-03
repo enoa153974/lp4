@@ -2,11 +2,7 @@
 import siteData from '../../siteData.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSpec from '../components/HeroSpec.astro';
-import About from '../components/About.astro';
-import Features from '../components/Features.astro';
-import Products from '../components/Products.astro';
-import FeaturesCase from '../components/FeaturesCase.astro';
-import News from '../components/News.astro';
+import Contact from '../components/Contact.astro';
 
 const pageId = 'spec',
     pageMeta = siteData[pageId],
@@ -33,4 +29,6 @@ const pageId = 'spec',
     ldJSON={ldJSON}
 >
     <HeroSpec />
+
+    <Contact />
 </BaseLayout>

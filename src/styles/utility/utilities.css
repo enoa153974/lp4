@@ -118,6 +118,13 @@
 .position-absolute { position: absolute; }
 .position-fixed { position: fixed; }
 .position-sticky { position: sticky; }
+.top-0    { top: 0; }
+.top-50p  { top: 50%; }
+.left-50p { left: 50%; }
+.z-10     { z-index: 10; }
+.translate-center {
+    transform: translate(-50%, -50%);
+}
 
 /* === Font Utilities === */
 .jp { font-family: var(--font-jp); }

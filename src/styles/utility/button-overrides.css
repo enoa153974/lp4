@@ -1,1 +1,29 @@
 /* テンプレボタンの上書きデザインを記述 */
+/* newsセクションのボタン */
+.btn--push.news__btn span{
+    background-color: var(--text-color-sub);
+    color: #fff;
+}
+
+.btn--push.news__btn::before{
+    background-color:#066655;
+}
+
+/* contactセクションのボタン */
+.btn--secondary.contact__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color:#fff;
+    border: 2px solid #fff;
+    width: 28%;
+    height: 80px;
+    border-radius: 50px;
+    font-size: var(--font-size-lg);
+}
+
+.btn--secondary.contact__btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
