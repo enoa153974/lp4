@@ -7,8 +7,12 @@
 
 .btn--push.news__btn::before{
     background-color:#066655;
+    top: 4px; 
+    left: 0; 
 }
-
+.btn--push.news__btn:hover span{
+    transform: translateY(4px);
+}
 /* contactセクションのボタン */
 .btn--secondary.contact__btn {
     display: flex;
