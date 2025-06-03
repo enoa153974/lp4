@@ -8,7 +8,7 @@
 /* 中身の最大幅制限＋中央寄せ */
 .l-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 2rem;
 }
