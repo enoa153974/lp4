@@ -344,6 +344,10 @@
     color: var(--accent-color);
 }
 
+.color-text-sub {
+    color: var(--text-color-sub);
+}
+
 .color-white {
     color: #fff;
 }

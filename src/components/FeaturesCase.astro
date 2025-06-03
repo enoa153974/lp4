@@ -64,15 +64,6 @@ const { title, items } = Astro.props as {
         margin-bottom: 3rem;
     }
 
-    /* 1つ目だけ余白追加、最後は下マージンなし */
-    .feature__item:first-of-type {
-        margin-top: var(--spacing-lg);
-    }
-
-    .feature__item:last-of-type {
-        margin-bottom: 0;
-    }
-
     /* 奇数番目の左右反転レイアウト */
     .reverse {
         flex-direction: row-reverse;

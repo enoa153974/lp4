@@ -1,0 +1,32 @@
+---
+import Button from '../components/Button';
+interface NewsProps {
+    text: string;
+    buttonLabel: string;
+    buttonHref: string;
+}
+
+const { text, buttonLabel, buttonHref } = Astro.props as NewsProps;
+---
+
+<div class="news l-container-full flex items-center bg-sub">
+    <div class="l-inner flex flex-col items-center">
+        <p class="mb-6 color-text-sub">{text}</p>
+        <Button href="リンク" className="news__btn" variant="push">
+            <span>ニュース一覧へ</span>
+        </Button>
+    </div>
+</div>
+
+<style>
+    .news {
+        height: 230px;
+    }
+
+    @media screen and (max-width: 767px) {
+    .news {
+        height: 200px;
+    }
+
+    }
+</style>

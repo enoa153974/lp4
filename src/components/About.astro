@@ -1,5 +1,5 @@
 ---
-interface FeatureItem {
+interface AboutItem {
     image: string;
     alt: string;
     pointNumber: number;
@@ -9,12 +9,12 @@ interface FeatureItem {
 
 const { title, items } = Astro.props as {
     title: string;
-    items: FeatureItem[];
+    items: AboutItem[];
 };
 ---
 
-<section id="feature" class="feature__section">
-    <div class="feature__inner l-container-full bg-sub">
+<section id="about" class="about__section">
+    <div class="about__inner l-container">
         <h2 class="text-center">
             {title}
         </h2>
@@ -23,7 +23,7 @@ const { title, items } = Astro.props as {
             items.map((item, index) => (
                 <div
                     class={[
-                        'feature__item', // 共通のベースクラス
+                        'about__item', // 共通のベースクラス
                         'flex', // Flexbox 有効化
                         'justify-center', // 水平方向中央寄せ
                         'flex-row', // 水平方向中央寄せ
@@ -47,29 +47,29 @@ const { title, items } = Astro.props as {
 
 <style>
 
-    .feature__inner{
+    .about__inner{
         padding: 2rem 0;
     }
 
-    .feature__section h2 {
+    .about__section h2 {
         margin: 0 auto var(--spacing-base);
         font-size: var(--font-size-xl);
         font-weight: var(--font-weight-bold);
     }
 
     /* セクションアイテムの共通スタイル */
-    .feature__item {
+    .about__item {
         width: 100%;
         max-width: clamp(20rem, 90vw, 75rem);
         margin-bottom: 3rem;
     }
 
     /* 1つ目だけ余白追加、最後は下マージンなし */
-    .feature__item:first-of-type {
+    .about__item:first-of-type {
         margin-top: var(--spacing-lg);
     }
 
-    .feature__item:last-of-type {
+    .about__item:last-of-type {
         margin-bottom: 0;
     }
 
@@ -91,15 +91,15 @@ const { title, items } = Astro.props as {
     }
 
     /* 左右の余白を reverse の有無で切り替える */
-    .feature__item:not(.reverse) > .item__text {
+    .about__item:not(.reverse) > .item__text {
         padding-left: clamp(1rem, 3vw, 2.5rem);
     }
 
-    .feature__item.reverse > .item__text {
+    .about__item.reverse > .item__text {
         padding-right: clamp(1rem, 3vw, 2.5rem);
     }
 
-    .feature__section h3 {
+    .about__section h3 {
         margin: 0;
         font-size: 1.75rem;
         font-style: italic;
@@ -107,7 +107,7 @@ const { title, items } = Astro.props as {
         color: #ff1493;
     }
 
-    .feature__section h3 span {
+    .about__section h3 span {
         margin-left: 0.5rem;
         font-size: 2.625rem;
         font-style: italic;
@@ -123,10 +123,10 @@ const { title, items } = Astro.props as {
     }
 
     @media screen and (max-width: 767px) {
-        .feature__section {
+        .about__section {
             background-color: #fff;
         }
-        .feature__item {
+        .about__item {
             gap: 1.5rem;
             margin: auto;
         }
@@ -141,11 +141,11 @@ const { title, items } = Astro.props as {
             padding-inline: 1rem;
         }
 
-        .feature__section h3 {
+        .about__section h3 {
             font-size: 1.5rem;
         }
 
-        .feature__section h3 span {
+        .about__section h3 span {
             font-size: 1.875rem;
         }
 

@@ -1,15 +1,17 @@
 /* カスタム変数cssの読み込み */
 :root {
     /* メインカラー */
-    --main-color: #fdf0f5;
+    --main-color: #fff;
     /* サブカラー */
-    --sub-color: #fff1f8;
+    --sub-color: #f3f9f6;
     /* アクセントカラー（強調やボタン背景） */
-    --accent-color: #fa7da3;
+    --accent-color: #168352;
     /* 背景色（sab） */
     --bg-color: #fff;
     /* 標準テキストの色 */
-    --text-color: #333;
+    --text-color: #000;
+    /* テキストの色(sub) */
+    --text-color-sub: #09947b;
     
     /* === フォント設定 === */
     /* 日本語フォント */
