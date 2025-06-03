@@ -1,0 +1,51 @@
+---
+import Button from '../components/Button';
+---
+
+<header class="l-header flex items-fenter bg-sub">
+    <div class="l-container flex items-fenter">
+        <div class="header__inner flex w-full">
+            <a href="#" class="header__logo block flex items-center" ><img src="/assets/image/logo.png" alt=""/></a>
+
+            <!-- ハンバーガーボタン（SP用） -->
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- メニュー -->
+            <nav class="header__nav">
+                <ul class="header__nav-inner flex items-center">
+                    <li>
+                        <a href="#アンカーリンク1" class="header__text">ナビ1</a>
+                    </li>
+                    <li>
+                        <a href="#アンカーリンク2" class="header__text">ナビ2</a>
+                    </li>
+                    <li>
+                        <a href="#アンカーリンク3" class="header__text">ナビ3</a>
+                    </li>
+                    <li>
+                        <Button href="リンク" className="" variant="push">
+                            <span>ボタンテキスト</span>
+                        </Button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<style>
+    .l-header{
+        height: var(--header-height);
+    }
+
+    .header__nav{
+        margin-left: auto;
+    }
+    .header__nav-inner{
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+    }
+</style>

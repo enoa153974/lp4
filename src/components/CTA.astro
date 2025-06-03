@@ -1,0 +1,36 @@
+---
+import Button from '../components/Button';
+interface CtaProps {
+    text: string;
+    buttonLabel: string;
+    buttonHref: string;
+}
+
+const { text, buttonLabel, buttonHref } = Astro.props as CtaProps;
+---
+
+<div class="cta l-container-full flex items-center bg-accent">
+    <div class="l-inner flex flex-col items-center">
+        <p class="mb-6">{text}</p>
+        <Button href="リンク" className="cta__btn" variant="push">
+            <span>ボタンテキスト</span>
+        </Button>
+    </div>
+</div>
+
+<style>
+    .cta {
+        height: 230px;
+    }
+
+    .cta p {
+        color: #fff;
+    }
+
+    @media screen and (max-width: 767px) {
+    .cta {
+        height: 200px;
+    }
+
+    }
+</style>

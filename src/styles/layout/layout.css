@@ -1,0 +1,57 @@
+/* ページ全体を包むラッパー */
+.l-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 中身の最大幅制限＋中央寄せ */
+.l-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 全幅表示用 */
+.l-container-full {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* l-containerの中でさらに絞りたいとき */
+.l-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 横並び系レイアウト */
+.l-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* カラムレイアウト用 */
+.l-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* メインコンテンツ（フッター押し下げ用） */
+.l-main {
+    flex: 1;
+}
+
+/* 任意のセクション背景にも使える
+.l-header {
+    background: #f0f0f0;
+}
+
+.l-footer {
+    background: #f0f0f0;
+} */

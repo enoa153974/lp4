@@ -1,0 +1,156 @@
+---
+interface FeatureItem {
+    image: string;
+    alt: string;
+    pointNumber: number;
+    pointTitle: string;
+    text: string;
+}
+
+const { title, items } = Astro.props as {
+    title: string;
+    items: FeatureItem[];
+};
+---
+
+<section id="feature" class="feature__section">
+    <div class="feature__inner l-container bg-sub">
+        <h2 class="text-center">
+            {title}
+        </h2>
+
+        {
+            items.map((item, index) => (
+                <div
+                    class={[
+                        'feature__item', // 共通のベースクラス
+                        'flex', // Flexbox 有効化
+                        'justify-center', // 水平方向中央寄せ
+                        'flex-row', // 水平方向中央寄せ
+                        'sm:flex-col-reverse', // スマホ表示で縦並びに
+                        index % 2 === 0 ? 'reverse' : '' // 奇数番目のアイテムだけ reverse クラスを付ける
+                    ].join(' ')}
+                >
+                    <img src={item.image} alt={item.alt} class="item__img block" />
+                    <div class="item__text">
+                        <h3 class="en">
+                            Point<span>{item.pointNumber}</span>
+                        </h3>
+                        <p class="lead">{item.pointTitle}</p>
+                        <p>{item.text}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<style>
+
+    .feature__inner{
+        padding: 2rem 0;
+    }
+
+    .feature__section h2 {
+        margin: 0 auto var(--spacing-base);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bold);
+    }
+
+    /* セクションアイテムの共通スタイル */
+    .feature__item {
+        width: 100%;
+        max-width: clamp(20rem, 90vw, 75rem);
+        margin-bottom: 3rem;
+    }
+
+    /* 1つ目だけ余白追加、最後は下マージンなし */
+    .feature__item:first-of-type {
+        margin-top: var(--spacing-lg);
+    }
+
+    .feature__item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /* 奇数番目の左右反転レイアウト */
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    .item__img {
+        width: clamp(18.75rem, 50vw, 35rem);
+        height: auto;
+        aspect-ratio: 560 / 346;
+        object-fit: cover;
+        border-radius: 1.25rem;
+    }
+
+    .item__text {
+        width: 100%;
+        max-width: 50%;
+    }
+
+    /* 左右の余白を reverse の有無で切り替える */
+    .feature__item:not(.reverse) > .item__text {
+        padding-left: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .feature__item.reverse > .item__text {
+        padding-right: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .feature__section h3 {
+        margin: 0;
+        font-size: 1.75rem;
+        font-style: italic;
+        font-weight: var(--font-weight-bold);
+        color: #ff1493;
+    }
+
+    .feature__section h3 span {
+        margin-left: 0.5rem;
+        font-size: 2.625rem;
+        font-style: italic;
+        font-weight: var(--font-weight-bold);
+        color: #ff1493;
+    }
+
+    .lead {
+        margin-top: 0;
+        margin-bottom: var(--spacing-sm);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-bold);
+    }
+
+    @media screen and (max-width: 767px) {
+        .feature__section {
+            background-color: #fff;
+        }
+        .feature__item {
+            gap: 1.5rem;
+            margin: auto;
+        }
+
+        /*奇数番目のカードの左右反転を戻す */
+        .reverse {
+            flex-direction: column-reverse;
+        }
+
+        .item__text {
+            max-width: 100%;
+            padding-inline: 1rem;
+        }
+
+        .feature__section h3 {
+            font-size: 1.5rem;
+        }
+
+        .feature__section h3 span {
+            font-size: 1.875rem;
+        }
+
+        .item__img {
+            width: 100%;
+        }
+    }
+</style>

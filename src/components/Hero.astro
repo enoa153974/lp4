@@ -1,0 +1,80 @@
+<section class="hero flex">
+    <div class="hero__inner flex justify-center sm:justify-start">
+        <div class="hero__text flex flex-col sm:w-full">
+            <h1 class="font__logo font-logo">
+                <span class="block"> heading</span>h1
+            </h1>
+            <p class="font-logo">sub-catchcopy</p>
+        </div>
+        <div class="hero__empty sm:hidden"></div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        position: relative;
+        width: 100%;
+        height: clamp(25rem, 47.6vw, 44.625rem);
+        background-image: url('/assets/image/mainVisual.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        max-width: 75rem;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero__text {
+        width: 50%;
+        max-width: 22.75rem;
+    }
+
+    .font__logo {
+        font-size: 3.125rem;
+        font-weight: var(--font-weight-normal);
+        line-height: 1.4;
+        letter-spacing: 0.3em;
+    }
+
+    .hero__text p {
+        font-size: 1.5625rem;
+        letter-spacing: 0.3em;
+    }
+
+    .hero__empty {
+        width: 58%;
+    }
+
+    @media screen and (width <=47.9375rem) {
+        .hero {
+            min-width: 15.625rem;
+            height: clamp(28.125rem, 115.38vw, 58.66vw);
+            margin-bottom: 5rem;
+            background-image: url('/assets/image/mainVisual_sp.jpg');
+        }
+
+        .hero__inner {
+            top: 50%;
+            left: 50%;
+            max-width: 18.75rem;
+            transform: translate(-60%, 104%);
+        }
+
+        .font__logo {
+            font-size: 2.5625rem;
+            line-height: 1.2;
+        }
+
+        .hero__text p {
+            margin-top: 0.625rem;
+            font-size: 1.25rem;
+            white-space: nowrap;
+        }
+    }
+</style>
