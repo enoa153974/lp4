@@ -1,0 +1,36 @@
+---
+import siteData from '../../siteData.mjs';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Features from '../components/Features.astro';
+import Products from '../components/Products.astro';
+import FeaturesCase from '../components/FeaturesCase.astro';
+import News from '../components/News.astro';
+
+const pageId = 'spec',
+    pageMeta = siteData[pageId],
+    ldJSON = [
+        {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+                '@id': `${import.meta.env.PUBLIC_ENVURL}${pageMeta.path}`,
+                name: 'spec'
+            }
+        }
+    ];
+---
+
+<!--BaseLayout.hemlの<slot />内に代入される -->
+<BaseLayout
+    pageName={pageId}
+    title={pageMeta.title}
+    description={pageMeta.description}
+    ogpImage={pageMeta.ogpImage}
+    type={pageMeta.type}
+    path={pageMeta.path}
+    ldJSON={ldJSON}
+>
+    <Hero />
+</BaseLayout>
