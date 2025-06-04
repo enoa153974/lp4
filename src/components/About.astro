@@ -33,9 +33,6 @@ const { title, items } = Astro.props as {
                 >
                     <img src={item.image} alt={item.alt} class="item__img block" />
                     <div class="item__text">
-                        <h3 class="en">
-                            Point<span>{item.pointNumber}</span>
-                        </h3>
                         <p class="lead">{item.pointTitle}</p>
                         <p>{item.text}</p>
                     </div>
