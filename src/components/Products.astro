@@ -1,93 +1,60 @@
 ---
-interface CardItem {
-    image: string;
-    alt: string;
-    text: string;
-}
-
-const { title, items } = Astro.props as {
-    title: string;
-    items: CardItem[];
-};
+import Card from './Card.astro'
 ---
 
-<section id="card" class="card__section">
-    <div class="card__inner l-container">
-        <h2 class="text-center">
-            {title}
-        </h2>
+<section class="products">
+    <div class="l-wrapper">
+        <div class="products__container l-container">
+            <h2 class="products__heading text-center font-bold">製品・サービス紹介</h2>
+            
+            <div class="products__card py-6">
+                <div class="">
+                    <Card
+                        imgSrc="/assets/image/products_service_img_01.jpg"
+                        alt=""
+                        text="農業の未来と革新的デザイン性で最新鋭の機能を完備"
+                        className="products__card-item products__card-item--01 flex"
+                    />
 
-        {
-            items.map((item, index) => (
-                <div
-                    class={[
-                        'card__item', // 共通のベースクラス
-                        'flex', // Flexbox 有効化
-                        'justify-center', // 水平方向中央寄せ
-                        'flex-row', // 水平方向中央寄せ
-                        'sm:flex-col-reverse', // スマホ表示で縦並びに
-                    ].join(' ')}
-                >
-                    <img src={item.image} alt={item.alt} class="item__img block" />
-                    <div class="item__text">
-                        <p>{item.text}</p>
-                    </div>
+                    <Card
+                        imgSrc="/assets/image/products_service_img_02.jpg"
+                        alt=""
+                        text="ビッグデータを駆使して、省電力・効率化を実現"
+                        className="products__card-item products__card-item--02 flex"
+                    />
                 </div>
-            ))
-        }
+                <div>
+                    <Card
+                        imgSrc="/assets/image/products_service_img_03.jpg"
+                        alt=""
+                        text="農業の未来と革新的デザイン性で最新鋭の機能を完備"
+                        className="products__card-item products__card-item--03 flex"
+                    />
+
+                    <Card
+                        imgSrc="/assets/image/products_service_img_04.jpg"
+                        alt=""
+                        text="ビッグデータを駆使して、省電力・効率化を実現"
+                        className="products__card-item products__card-item--04 flex"
+                    />
+
+                    <Card
+                        imgSrc="/assets/image/products_service_img_05.jpg"
+                        alt=""
+                        text="自動運転技術を搭載したロボットで一年中稼働することができる"
+                        className="products__card-item products__card-item--05 flex"
+                    />
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
-
-    .card__inner{
-        padding: 2rem 0;
+    .products__container{
+        padding-block:4rem ;
     }
-
-    .card__section h2 {
-        margin: 0 auto var(--spacing-base);
-        font-size: var(--font-size-xl);
-        font-weight: var(--font-weight-bold);
-    }
-
-    /* セクションアイテムの共通スタイル */
-    .card__item {
-        width: 100%;
-        max-width: clamp(20rem, 90vw, 75rem);
-        margin-bottom: 3rem;
-    }
-
-
-    .item__img {
-        width: clamp(18.75rem, 50vw, 35rem);
-        height: auto;
-        aspect-ratio: 560 / 346;
-        object-fit: cover;
-        border-radius: 1.25rem;
-    }
-
-    .item__text {
-        width: 100%;
-        max-width: 50%;
-    }
-
-    @media screen and (max-width: 767px) {
-        .card__section {
-            background-color: #fff;
-        }
-        .card__item {
-            gap: 1.5rem;
-            margin: auto;
-        }
-
-
-        .item__text {
-            max-width: 100%;
-            padding-inline: 1rem;
-        }
-
-        .item__img {
-            width: 100%;
-        }
+    .products__heading{
+        font-size: 1.75rem;
     }
 </style>

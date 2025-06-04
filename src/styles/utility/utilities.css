@@ -126,6 +126,28 @@
     transform: translate(-50%, -50%);
 }
 
+.objpos-center {
+    object-position: center;
+}
+.objpos-top {
+    object-position: top;
+}
+.objpos-bottom {
+    object-position: bottom;
+}
+.objpos-left {
+    object-position: left;
+}
+.objpos-right {
+    object-position: right;
+}
+.objpos-top-center {
+    object-position: center top;
+}
+.objpos-bottom-center {
+    object-position: center bottom;
+}
+
 /* === Font Utilities === */
 .jp { font-family: var(--font-jp); }
 .en { font-family: var(--font-en); }

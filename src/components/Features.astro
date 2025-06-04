@@ -1,87 +1,46 @@
 ---
-interface FeatureItem {
-    image: string;
-    alt: string;
-    text: string;
-}
-
-const { title, items } = Astro.props as {
-    title: string;
-    items: FeatureItem[];
-};
+import Card from './Card.astro'
 ---
 
-<section id="feature" class="feature__section">
-    <div class="feature__inner l-container-full bg-sub">
-        <h2 class="text-center">
-            {title}
-        </h2>
-        {
-            items.map((item, index) => (
-                <div class="l-inner">
-                    <div class="feature__card">
-                        <img src={item.image} alt={item.alt} class="item__img block" />
-                        <div class="item__text">
-                            <p>{item.text}</p>
-                        </div>
-                    </div>
-                </div>
-            ))
-        }
+<section class="feature">
+    <div class="l-wrapper bg-sub">
+        <div class="feature__container l-container">
+            <h2 class="feature__heading text-center font-bold">私たちが選ばれる3つの理由</h2>
+            
+            <div class="feature__card flex pt-6">
+                <Card
+                    imgSrc="/assets/image/feature_img_01.jpg"
+                    alt=""
+                    text="農業の未来と革新的デザイン性で最新鋭の機能を完備"
+                    className="feature__card-item"
+                />
+
+                <Card
+                    imgSrc="/assets/image/feature_img_02.jpg"
+                    alt=""
+                    text="ビッグデータを駆使して、省電力・効率化を実現"
+                    className="feature__card-item"
+                />
+
+                <Card
+                    imgSrc="/assets/image/feature_img_03.jpg"
+                    alt=""
+                    text="自動運転技術を搭載したロボットで一年中稼働することができる"
+                    className="feature__card-item"
+                />
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
-
-    .feature__section h2 {
-        margin: 0 auto var(--spacing-base);
-        font-size: var(--font-size-xl);
-        font-weight: var(--font-weight-bold);
+    .feature__container{
+        padding-block:4rem ;
     }
-
-    /* セクションアイテムの共通スタイル */
+    .feature__heading{
+        font-size: 1.75rem;
+    }
     .feature__card{
-        width: 100%;
-    }
-    .item__img {
-        width: 100%;
-        object-fit: cover;
-        border-radius:28px 28px 0 0;
-    }
-
-    .item__text {
-        width: 100%;
-        border-radius:0 0 28px 28px;
-    }
-    @media screen and (max-width: 767px) {
-        .feature__section {
-            background-color: #fff;
-        }
-        .feature__item {
-            gap: 1.5rem;
-            margin: auto;
-        }
-
-        /*奇数番目のカードの左右反転を戻す */
-        .reverse {
-            flex-direction: column-reverse;
-        }
-
-        .item__text {
-            max-width: 100%;
-            padding-inline: 1rem;
-        }
-
-        .feature__section h3 {
-            font-size: 1.5rem;
-        }
-
-        .feature__section h3 span {
-            font-size: 1.875rem;
-        }
-
-        .item__img {
-            width: 100%;
-        }
+        gap: 2rem;
     }
 </style>

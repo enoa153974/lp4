@@ -33,3 +33,5 @@
 @import './utility/button.css';
 /* ボタンの上書きデザイン */
 @import './utility/button-overrides.css';
+/* カードの上書きデザイン */
+@import './utility/card-overrides.css';

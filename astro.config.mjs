@@ -24,6 +24,7 @@ export default defineConfig({
     },
     vite: {
         build: {
+            sourcemap: true,
             rollupOptions: {
                 output: {
                     entryFileNames: 'assets/scripts/main.min.js',
