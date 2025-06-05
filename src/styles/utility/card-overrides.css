@@ -123,3 +123,18 @@
     font-size: 1.2rem;
     padding: 1rem 0;
 }
+
+/* 特徴セクションのカードデザイン上書き */
+.feature-spec__card-item{
+    box-shadow:none;
+}
+
+.feature-spec__card-item .card__img{
+    border-radius: 28px;
+}
+.card.feature-spec__card-item .card__text {
+    color: var(--text-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
