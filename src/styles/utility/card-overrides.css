@@ -30,28 +30,33 @@
 .card.products__card-item--01{
     grid-column: span 3 / span 3;
     height: 180px;
+    padding-right: 20%;
 }
 .card.products__card-item--02{
     grid-column: span 3 / span 3;
     grid-column-start: 4;
     height: 180px;
+    padding-right: 20%;
 }
 .card.products__card-item--03{
     grid-column: span 2 / span 2;
     grid-row-start: 2;
-    height: 150px;   
+    height: 150px;
+    padding-right: 10%;
 }
 .card.products__card-item--04{
     grid-column: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 2;
-    height: 150px;     
+    height: 150px;
+    padding-right: 10%;     
 }
 .card.products__card-item--05{
     grid-column: span 2 / span 2;
     grid-column-start: 5;
     grid-row-start: 2;
-    height: 150px; 
+    height: 150px;
+    padding-right: 10%; 
 }
 /* カードイメージ */
 .card.products__card-item .img__wrapper{
@@ -93,6 +98,13 @@
     width: 60%;
     box-shadow:none;
     padding: 0;
+    font-size: var(--font-size-lg2);
+}
+
+.card.products__card-item--03 .card__text,
+.card.products__card-item--04 .card__text,
+.card.products__card-item--05 .card__text{
+    font-size: var(--font-size-xl);   
 }
 
 

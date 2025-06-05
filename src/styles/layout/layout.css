@@ -23,7 +23,7 @@
 
 /* l-containerの中でさらに絞りたいとき */
 .l-inner {
-    max-width: 960px;
+    max-width: 70%;
     margin: 0 auto;
     padding: 0 2rem;
 }

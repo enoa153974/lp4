@@ -1,14 +1,25 @@
 /* テンプレボタンの上書きデザインを記述 */
 /* newsセクションのボタン */
+.btn--push.news__btn.btn{
+    width: 32%;
+    font-size: 18px;
+}
+
 .btn--push.news__btn span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
     background-color: var(--text-color-sub);
     color: #fff;
+    border-radius: 32px;
 }
 
 .btn--push.news__btn::before{
     background-color:#066655;
     top: 4px; 
-    left: 0; 
+    left: 0;
+    border-radius: 32px;
 }
 .btn--push.news__btn:hover span{
     transform: translateY(4px);
