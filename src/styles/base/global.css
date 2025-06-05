@@ -11,6 +11,17 @@ body {
     color: #333;
 }
 
+h1{
+    font-size: var(--font-size-2xl);
+}
+h2{
+    font-size: var(--font-size-lg2);
+}
+
+h3{
+    font-size: var(--font-size-xl);
+}
+
 img {
     max-width: 100%;
     height: auto;

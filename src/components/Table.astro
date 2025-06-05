@@ -1,0 +1,48 @@
+---
+interface Props {
+    tableData: { heading: string; text: string }[];
+    className?: string;
+}
+
+const { tableData, className = '' } = Astro.props;
+---
+
+<table class={`product-table ${className}`}>
+    <tbody>
+        {
+            tableData.map((row) => (
+                <tr>
+                    <th>{row.heading}</th>
+                    <td>{row.text}</td>
+                </tr>
+            ))
+        }
+    </tbody>
+</table>
+
+<style>
+    .product-table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .product-table th,
+    .product-table td {
+        border: 1px solid #ccc;
+        padding: 0.8rem;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .product-table th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        width: 30%;
+        white-space: nowrap;
+    }
+
+    .product-table td {
+        background-color: #fff;
+    }
+</style>

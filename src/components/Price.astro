@@ -1,0 +1,29 @@
+---
+import Table from './Table.astro';
+
+interface Props {
+    droneData: { heading: string; text: string }[];
+}
+
+const { droneData } = Astro.props;
+---
+
+<section class="l-wrapper">
+    <div class="l-container pb-20">
+        <div class="l-inner">
+            <h2 class="font-bold u-heading-line">メーカー希望小売価格</h2>
+            <p class="font-bold mb-12">￥550,000</p>
+            <h2 class="font-bold u-heading-line">スペック</h2>
+            <div class="px-8">
+                <h3 class="font-bold u-border-left">機体</h3>
+                <Table tableData={droneData} />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    p{
+        font-size: var(--font-size-lg2);
+    }
+</style>
