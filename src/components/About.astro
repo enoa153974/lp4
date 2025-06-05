@@ -14,28 +14,18 @@ const { title, items } = Astro.props as {
 ---
 
 <section id="about" class="about__section">
-    <div class="about__inner l-container">
+    <div class="about__container l-container">
         <h2 class="text-center">
             {title}
         </h2>
-
         {
             items.map((item, index) => (
-                <div
-                    class={[
-                        'about__item', // 共通のベースクラス
-                        'flex', // Flexbox 有効化
-                        'justify-center', // 水平方向中央寄せ
-                        'flex-row', // 水平方向中央寄せ
-                        'sm:flex-col-reverse', // スマホ表示で縦並びに
-                        index % 2 === 0 ? 'reverse' : '' // 奇数番目のアイテムだけ reverse クラスを付ける
-                    ].join(' ')}
-                >
-                    <img src={item.image} alt={item.alt} class="item__img block" />
-                    <div class="item__text">
-                        <p class="lead">{item.pointTitle}</p>
+                <div class="about__item l-row sm:flex-col">
+                    <div class="item__text l-col">
+                        <p class="lead font-bold mb-8">{item.pointTitle}</p>
                         <p>{item.text}</p>
                     </div>
+                    <img src={item.image} alt={item.alt} class="item__img block l-col" />
                 </div>
             ))
         }
@@ -44,79 +34,35 @@ const { title, items } = Astro.props as {
 
 <style>
 
-    .about__inner{
-        padding: 2rem 0;
+    .about__container{
+        padding: 3rem;
     }
 
     .about__section h2 {
-        margin: 0 auto var(--spacing-base);
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg2);
         font-weight: var(--font-weight-bold);
     }
 
     /* セクションアイテムの共通スタイル */
     .about__item {
         width: 100%;
-        max-width: clamp(20rem, 90vw, 75rem);
-        margin-bottom: 3rem;
+        gap: 155px;
+        padding: 3rem;
     }
 
-    /* 1つ目だけ余白追加、最後は下マージンなし */
-    .about__item:first-of-type {
-        margin-top: var(--spacing-lg);
-    }
-
-    .about__item:last-of-type {
-        margin-bottom: 0;
-    }
-
-    /* 奇数番目の左右反転レイアウト */
-    .reverse {
-        flex-direction: row-reverse;
-    }
     .item__img {
-        width: clamp(18.75rem, 50vw, 35rem);
-        height: auto;
-        aspect-ratio: 560 / 346;
+        width:100%;
         object-fit: cover;
-        border-radius: 1.25rem;
+        border-radius: 50px;
     }
 
     .item__text {
         width: 100%;
-        max-width: 50%;
-    }
-
-    /* 左右の余白を reverse の有無で切り替える */
-    .about__item:not(.reverse) > .item__text {
-        padding-left: clamp(1rem, 3vw, 2.5rem);
-    }
-
-    .about__item.reverse > .item__text {
-        padding-right: clamp(1rem, 3vw, 2.5rem);
-    }
-
-    .about__section h3 {
-        margin: 0;
-        font-size: 1.75rem;
-        font-style: italic;
-        font-weight: var(--font-weight-bold);
-        color: #ff1493;
-    }
-
-    .about__section h3 span {
-        margin-left: 0.5rem;
-        font-size: 2.625rem;
-        font-style: italic;
-        font-weight: var(--font-weight-bold);
-        color: #ff1493;
+        padding-top:10%;
     }
 
     .lead {
-        margin-top: 0;
-        margin-bottom: var(--spacing-sm);
         font-size: var(--font-size-lg);
-        font-weight: var(--font-weight-bold);
     }
 
     @media screen and (max-width: 767px) {
