@@ -10,14 +10,12 @@ export function initSlider() {
         }
 
         $('.autoplay').slick({
-            slidesToShow: 3, // PC時は3枚表示
+            slidesToShow: 1, // PC時は1枚表示
             slidesToScroll: 1, // スクロール時に1枚ずつ動かす
-            variableWidth: false, // 幅はCSS任せにせず等分する
+            variableWidth: true, // 幅はCSSで決定
             autoplay: false, // ← 自動再生なし。
             dots: true, // 下部のドットナビゲーションを表示
-            arrows: true, // 左右の矢印を表示
-            prevArrow: '.slick-prev',
-            nextArrow: '.slick-next',
+            arrows: false, // 左右の矢印を非表示
             responsive: [
                 {
                     breakpoint: 768, // 767px以下の画面幅になったら

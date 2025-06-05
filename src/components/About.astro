@@ -13,14 +13,14 @@ const { title, items } = Astro.props as {
 };
 ---
 
-<section id="about" class="about__section">
-    <div class="about__container l-container">
+<section id="about" class="about__section l-wrapper">
+    <div class="about__container l-container-full">
         <h2 class="text-center">
             {title}
         </h2>
         {
             items.map((item, index) => (
-                <div class="about__item l-row sm:flex-col">
+                <div class="about__item l-inner l-row">
                     <div class="item__text l-col">
                         <p class="lead font-bold mb-8">{item.pointTitle}</p>
                         <p>{item.text}</p>
@@ -35,7 +35,7 @@ const { title, items } = Astro.props as {
 <style>
 
     .about__container{
-        padding: 3rem;
+        padding:var(--spacing-xl) 0;
     }
 
     .about__section h2 {
@@ -46,18 +46,18 @@ const { title, items } = Astro.props as {
     /* セクションアイテムの共通スタイル */
     .about__item {
         width: 100%;
-        gap: 155px;
-        padding: 3rem;
+        gap:20%;
+        padding: 0;
     }
 
     .item__img {
-        width:100%;
+        width:40%;
         object-fit: cover;
         border-radius: 50px;
     }
 
     .item__text {
-        width: 100%;
+        width: 40%;
         padding-top:10%;
     }
 

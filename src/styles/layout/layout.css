@@ -32,14 +32,12 @@
 .l-row {
     display: flex;
     flex-direction:row;
-    flex-wrap: wrap;
     gap: 16px;
 }
 
 /* カラムレイアウト用 */
 .l-col {
     flex: 1;
-    min-width: 300px;
 }
 
 /* メインコンテンツ（フッター押し下げ用） */

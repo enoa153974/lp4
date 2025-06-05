@@ -118,7 +118,7 @@
     border-radius: 28px;
 }
 .card.feature-case__card-item .card__text {
-    color: var(--text-color-sub);
+    color: var(--text-color);
     font-weight: var(--font-weight-bold);
     font-size: 1.2rem;
     padding: 1rem 0;

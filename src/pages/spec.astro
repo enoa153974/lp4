@@ -2,6 +2,7 @@
 import siteData from '../../siteData.mjs';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSpec from '../components/HeroSpec.astro';
+import Gallery from '../components/Gallery.astro';
 import FeaturesSpec from '../components/FeaturesSpec.astro';
 import Contact from '../components/Contact.astro';
 
@@ -30,6 +31,34 @@ const pageId = 'spec',
     ldJSON={ldJSON}
 >
     <HeroSpec />
+    <Gallery
+        title="ギャラリー"
+        gallerys={[
+            {
+                image: '/assets/image/gallery_pht_01.jpg',
+                alt:''
+            },
+                        {
+                image: '/assets/image/gallery_pht_02.jpg',
+                alt:''
+            },
+                        {
+                image: '/assets/image/gallery_pht_03.jpg',
+                alt:''
+            },
+                        {
+                image: '/assets/image/gallery_pht_01.jpg',
+                alt:''
+            },
+                        {
+                image: '/assets/image/gallery_pht_02.jpg',
+                alt:''
+            },
+                        {
+                image: '/assets/image/gallery_pht_03.jpg',
+                alt:''
+            }
+    ]}/>
     <FeaturesSpec />
     <Contact />
 </BaseLayout>

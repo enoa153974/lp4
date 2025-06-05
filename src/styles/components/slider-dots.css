@@ -1,77 +1,37 @@
 /* スライダーcssの読み込み */
 .slider {
     position: relative;
-    margin: 0 auto;
-    max-width: 75%;
-}
+    width: 100%;   
+    max-width: 800px;
+    padding: 0;
+    }
 
 .slick-slide {
-    padding: 0 10px;
-    /* ← 左右の余白になる */
+    padding: 0;
     box-sizing: border-box;
 }
 
 .slider__wrapper {
-    width: 980px;
+    width:100%;
     height: auto;
-    max-height: 421px;
-    margin-top: 34px;
     overflow: hidden;
 }
 
 .slider__track .card {
     flex-shrink: 0;
     width: 100%;
-    max-width: 310px;
     height: auto;
-    text-align: center;
-    background-color: var(--bg-color);
-    border: solid 1px var(--accent-color);
 }
 
 .card__inner {
     width: 100%;
     height: auto;
-    padding: clamp(0px, 0.56vw, 8px) clamp(0px, 1.11vw, 16px) clamp(0px, 0.56vw, 8px) clamp(0px, 1.11vw, 16px);
-    overflow: hidden;
-}
-
-.slider__img-wrapper {
-    width: 35%;
-    height: 118px;
-}
-
-.card__text {
-    width: 65%;
-}
-
-.avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.card p {
-    font-size: clamp(16px, 1.25vw, 18px);
-    padding: 3px;
-}
-
-.card__text p:nth-of-type(1) {
-    margin-top: 3px;
-    font-size: clamp(10px, 1.1vw, 16px);
-    white-space: nowrap;
-}
-
-.card p:last-child {
-    margin: 0;
-    font-size: clamp(10px, 1vw, 14px);
-    line-height: 1.5;
-    text-align: left;
 }
 
 /* ドットコンテナ */
 .slick-dots {
-    position: static;
+    position: absolute;
+    bottom: 5%;
     gap: 8px;
     width: 100%;
 }
@@ -85,15 +45,15 @@
 /* 各ドットボタン */
 .slick-dots li button {
     position: static;
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     padding: 0;
     margin: 0;
     font-size: 0;
     line-height: 0;
     appearance: none;
     cursor: pointer;
-    background-color: #ffd2d2;
+    background-color:#eee;
     border: none;
     border-radius: 50%;
     transition: background-color 0.3s ease;

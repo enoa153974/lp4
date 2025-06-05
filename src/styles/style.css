@@ -20,7 +20,7 @@
 /* アコーディオンメニューcss */
 @import './components/accordion.css';
 /* スライダー（カルーセル）css */
-@import './components/slider-arrow.css';
+@import './components/slider-dots.css';
 /* タブメニューcss */
 @import './components/tabmenu.css';
 
