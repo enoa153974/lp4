@@ -8,17 +8,64 @@
 }
 
 /* productsセクションのカードの上書きデザイン */
+/* カード */
+.products__card{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+}
 .card.products__card-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
     background-color:var(--accent-color);
     border-radius: 28px;
     padding: 1rem 2rem;
     color: #fff;
 }
+/* カードの配置 */
+.card.products__card-item--01{
+    grid-column: span 3 / span 3;
+    height: 180px;
+}
+.card.products__card-item--02{
+    grid-column: span 3 / span 3;
+    grid-column-start: 4;
+    height: 180px;
+}
+.card.products__card-item--03{
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    height: 150px;   
+}
+.card.products__card-item--04{
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    height: 150px;     
+}
+.card.products__card-item--05{
+    grid-column: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 2;
+    height: 150px; 
+}
+/* カードイメージ */
 .card.products__card-item .img__wrapper{
-    width: clamp(3.75rem, 6.67vw, 6.25rem);
-    height: clamp(3.75rem, 6.67vw, 6.25rem);
+    width: 120px;
+    height:120px;
     overflow: hidden;
     border-radius: 50%;
+    margin: 0 auto
+}
+.card.products__card-item--03 .img__wrapper,
+.card.products__card-item--04 .img__wrapper,
+.card.products__card-item--05 .img__wrapper{
+    width: 100px;
+    height:100px;
 }
 .card.products__card-item .card__img{
     width: 100%;
@@ -26,7 +73,7 @@
     object-fit: cover;
     object-position: center center;
 }
-
+/* カード内イメージ（丸抜き）の位置調整 */
 .card.products__card-item--01 .card__img{
 
 }
@@ -43,7 +90,9 @@
 
 }
 .card.products__card-item .card__text{
+    width: 60%;
     box-shadow:none;
+    padding: 0;
 }
 
 
