@@ -16,8 +16,10 @@
     /* === フォント設定 === */
     /* 日本語フォント */
     --font-jp: 'Noto Sans JP', serif;
+    /* 英語フォント */
+    --font-en: 'Montserrat', serif;
     /* ロゴ専用フォント */
-    --font-logo: 'Outfit', serif;
+    --font-logo: 'Montserrat', serif;
 
 /* === フォントサイズ（可変 / 基準：1400px） === */
 /* xs: 0.75rem〜0.875rem（12px〜14px） */

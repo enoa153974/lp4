@@ -23,9 +23,11 @@
 
 /* l-containerの中でさらに絞りたいとき */
 .l-inner {
+    width: 100%;
+    max-width: 800px;
     max-width: 70%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0;
 }
 
 /* 横並び系レイアウト */

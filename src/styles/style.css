@@ -21,8 +21,6 @@
 @import './components/accordion.css';
 /* スライダー（カルーセル）css */
 @import './components/slider-dots.css';
-/* タブメニューcss */
-@import './components/tabmenu.css';
 
 /* -------------------------------
  *  file import (utility)

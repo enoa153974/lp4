@@ -1,57 +1,30 @@
 ---
 interface Props {
     title: string;
-    subtitle: string;
     items: FaqItem[];
 }
 interface FaqItem {
     question: string;
+    category01:string;
+    category02:string;
     answer: string;
 }
 
-const { title, subtitle, items } = Astro.props as Props;
+const { title, items } = Astro.props as Props;
 
-import AccordionItem from './AccordionItem.astro';
+import AccordionItem from './FaqAccordionItem.astro';
 import '../styles/components/accordion.css';
 ---
 
-<section class="faq flex flex-col container">
-    <h2 class="faq__heading text-center">
+<section class="faq-section l-container pt-20 pb-10">
+    <h2 class="faq-section__heading text-center">
         <span class="en block">{title}</span>
-        <span class="block">{subtitle}</span>
     </h2>
 
-    <div class="faq__inner">
-        {items.map((item) => <AccordionItem question={item.question} answer={item.answer} />)}
+    <div class="faq-section__inner l-inner">
+        {items.map((item) => <AccordionItem question={item.question} answer={item.answer} category01={item.category01} category02={item.category02}/>)}
     </div>
 </section>
 
 <style>
-    .faq {
-        width: 100%;
-        height: auto;
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-        background: var(--sub-color);
-    }
-
-    .faq__heading span {
-        font-size: 45px;
-        font-weight: var(--font-weight-bold);
-        line-height: 1.2;
-    }
-
-    .faq__heading span:last-child {
-        font-size: 1.875rem;
-        font-weight: var(--font-weight-semibold);
-        line-height: 2.3;
-    }
-
-    .faq__inner {
-        width: 100%;
-        max-width: 37.5rem;
-        height: auto;
-        min-height: 31.25rem;
-        margin: 2.1875rem auto 0;
-    }
 </style>

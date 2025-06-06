@@ -32,12 +32,8 @@ a {
     color: inherit;
 }
 
-.container {
-    max-width: var(--container-max-width);
-    margin-inline: auto;
-}
-
 /* === スマホ表示(ブレイクポイント767px) === */
 @media screen and (width <=47.9375rem) {
+
 
 }

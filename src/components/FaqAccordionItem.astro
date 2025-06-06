@@ -1,0 +1,20 @@
+---
+const { question, answer, category01 = '',category02 = '' } = Astro.props;
+---
+
+<div class="faq">
+    <button class="faq__button" aria-expanded="true">
+        <div class="faq__header">
+            <div class="faq__icon en">Q.</div>
+            <div class="faq__title-group">
+                {category01 && <span class="faq__category">{category01}</span>}
+                {category02 && <span class="faq__category">{category02}</span>}
+                <p class="faq__question">{question}</p>
+            </div>
+            <span class="faq__toggle-icon">+</span>
+        </div>
+    </button>
+    <div class="faq__content">
+        <p class="faq__answer">{answer}</p>
+    </div>
+</div>
