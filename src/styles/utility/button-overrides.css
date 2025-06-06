@@ -42,3 +42,14 @@
     background-color: var(--accent-color);
     color: #fff;
 }
+
+@media (max-width: 767px) {
+/* newsセクションのボタン */
+    .btn--push.news__btn.btn{
+    width: 80%;
+    }
+/* contactセクションのボタン */
+    .btn--secondary.contact__btn {
+    width: 90%;
+}
+}

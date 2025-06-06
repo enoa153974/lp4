@@ -11,8 +11,10 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
 ---
 
 <div class="news-item flex items-center py-4">
-    <div class="news-date font-bold">{date}</div>
-    <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
+    <div class="news-item__inner flex items-center">
+        <div class="news-date font-bold">{date}</div>
+        <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
+    </div>
     <div class="news-title font-bold pl-2">{title}</div>
 </div>
 
@@ -23,8 +25,11 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
     }
+    .news-item__inner{
+        width: 30%;
+        gap: 1rem;
+    }
     .news-date {
-        width: 90px;
         color: #666;
     }
     .news-badge {
@@ -33,7 +38,7 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
         padding: 6px;
         border-radius: 4px;
         color: white;
-        width: 15%;
+        width: 100%;
     }
     .badge--notice {
         background-color: #473221;
@@ -45,5 +50,22 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
         flex: 1;
         color:var(--text-color-sub);
     }
+@media (max-width: 767px) {
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .news-item__inner{
+        display: flex;
+        width: 100%;
+    }
+    .news-badge  {
+        width:35%;
+        margin-left: 0.75rem;
+    }
+    .news-title {
+        padding: 0;
+    }
+}
 </style>

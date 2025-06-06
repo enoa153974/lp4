@@ -7,23 +7,25 @@ interface AboutItem {
     text: string;
 }
 
-const { title, items } = Astro.props as {
+const { title, subtitle ,items } = Astro.props as {
     title: string;
+    subtitle:string;
     items: AboutItem[];
 };
 ---
 
 <section id="about" class="about__section l-wrapper">
     <div class="about__container l-container-full">
+        <p class="text-center color-text-sub font-bold en">{subtitle}</p>
         <h2 class="text-center">
             {title}
         </h2>
         {
             items.map((item, index) => (
                 <div class="about__item l-inner l-row">
-                    <div class="item__text l-col">
-                        <p class="lead font-bold mb-8">{item.pointTitle}</p>
-                        <p>{item.text}</p>
+                        <div class="item__text l-col">
+                            <p class="lead font-bold mb-8">{item.pointTitle}</p>
+                            <p class="desc">{item.text}</p>
                     </div>
                     <img src={item.image} alt={item.alt} class="item__img block l-col" />
                 </div>
@@ -33,9 +35,16 @@ const { title, items } = Astro.props as {
 </section>
 
 <style>
-
+    /* === デバッグ用各要素アウトライン === */
+    * {
+        outline: 1px solid red;
+    }
     .about__container{
         padding:var(--spacing-xl) 0;
+    }
+
+    .about__container>p{
+        font-size: 20px;
     }
 
     .about__section h2 {
@@ -64,35 +73,32 @@ const { title, items } = Astro.props as {
         font-size: var(--font-size-lg);
     }
 
-    @media screen and (max-width: 767px) {
-        .about__section {
-            background-color: #fff;
-        }
-        .about__item {
-            gap: 1.5rem;
-            margin: auto;
-        }
-
-        /*奇数番目のカードの左右反転を戻す */
-        .reverse {
-            flex-direction: column-reverse;
-        }
-
-        .item__text {
-            max-width: 100%;
-            padding-inline: 1rem;
-        }
-
-        .about__section h3 {
-            font-size: 1.5rem;
-        }
-
-        .about__section h3 span {
-            font-size: 1.875rem;
-        }
-
-        .item__img {
-            width: 100%;
-        }
+@media screen and (max-width: 767px) {
+    .about__item{
+        position:relative;
+        gap: 0;
     }
+    .item__img {
+        width:100%;
+        border-radius:0;
+    }
+
+    .item__text{
+        position:absolute;
+        top:5%;
+        left: 5%;
+        width: 90%;
+        background-color: #fff;
+        opacity: 80%;
+        padding: 2rem 1.5rem;
+        border-radius: 28px;
+    }
+    .lead {
+        margin-bottom: 1rem;
+        font-size: 18px;
+    }
+    .desc{
+        font-size:var(--font-size-sm) ;
+    }
+}
 </style>

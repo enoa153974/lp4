@@ -5,6 +5,7 @@ import Card from './Card.astro'
 <section class="products">
     <div class="l-wrapper">
         <div class="products__container l-container">
+            <p class="text-center color-text-sub font-bold en">Products / Service</p>
             <h2 class="products__heading text-center font-bold">製品・サービス紹介</h2>
             
             <div class="products__card py-6">
@@ -49,5 +50,13 @@ import Card from './Card.astro'
 <style>
     .products__container{
         padding-block:4rem ;
+    }
+    .products__container>p{
+        font-size: 20px;
+    }
+    @media screen and (max-width: 767px) {
+    .products__container{
+        padding:3rem 1rem ;
+    }
     }
 </style>

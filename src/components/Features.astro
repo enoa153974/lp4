@@ -5,9 +5,10 @@ import Card from './Card.astro'
 <section class="feature">
     <div class="l-wrapper bg-sub">
         <div class="feature__container l-container">
+            <p class="text-center color-text-sub font-bold en">Features</p>
             <h2 class="feature__heading text-center font-bold">私たちが選ばれる3つの理由</h2>
             
-            <div class="feature__card flex pt-6">
+            <div class="feature__card flex pt-6 font-bold">
                 <Card
                     imgSrc="/assets/image/feature_img_01.jpg"
                     alt=""
@@ -37,7 +38,15 @@ import Card from './Card.astro'
     .feature__container{
         padding-block:4rem ;
     }
+    .feature__container>p{
+        font-size: 20px;
+    }
     .feature__card{
         gap: 2rem;
+}
+@media screen and (max-width: 767px) {
+    .feature__card{
+        flex-direction: column;
     }
+}
 </style>

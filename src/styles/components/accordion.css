@@ -28,10 +28,6 @@
     line-height: 1;
 }
 
-.faq__title-group {
-    flex-grow: 1;
-}
-
 .faq__category {
     display: inline-block;
     font-size: 0.75rem;
@@ -81,4 +77,22 @@
 .faq.is-open .faq__content {
     max-height: 1000px;
     margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+    .faq {
+        padding: 1.5rem;
+    }
+
+    .faq__question {
+        font-size:1rem ;
+    }
+
+    .faq__category {
+    font-size:11px;
+    padding: 4px 10px;
+    margin-bottom:0.25rem;
+    margin-right:  0.5rem;
+}
+
 }

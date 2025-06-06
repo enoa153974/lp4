@@ -774,7 +774,7 @@
     background-color: var(--accent-color);
 }
 
-@media screen and (width <=767px) {
+@media screen and (max-width: 767px) {
     /* ブレイクポイント767px */
 
     /* === 余白系（margin） === */
@@ -1052,6 +1052,23 @@
 
     .sm\:justify-end {
         justify-content: flex-end;
+    }
+
+  /* === position系 ===  */
+    .sm\:position-relative {
+        position: relative;
+    }
+
+    .sm\:position-absolute {
+        position: absolute;
+    }
+
+    .sm\:position-fixed {
+        position: fixed;
+    }
+
+    .sm\:position-sticky {
+        position: sticky;
     }
 
     /* === フォント・テキスト === */

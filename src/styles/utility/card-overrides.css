@@ -1,140 +1,197 @@
 /* featureセクションのカードの上書きデザイン */
-.feature__card-item{
+.feature__card-item {
     border-radius: 28px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-.feature__card-item p{
+
+.feature__card-item p {
     background-color: #fff;
 }
 
 /* productsセクションのカードの上書きデザイン */
 /* カード */
-.products__card{
+.products__card {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 50px;
 }
-.card.products__card-item{
+
+.card.products__card-item {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     gap: 1rem;
-    background-color:var(--accent-color);
+    background-color: var(--accent-color);
     border-radius: 28px;
     padding: 1rem 2rem;
     color: #fff;
 }
+
 /* カードの配置 */
-.card.products__card-item--01{
+.card.products__card-item--01 {
     grid-column: span 3 / span 3;
     height: 180px;
     padding-right: 20%;
 }
-.card.products__card-item--02{
+
+.card.products__card-item--02 {
     grid-column: span 3 / span 3;
     grid-column-start: 4;
     height: 180px;
     padding-right: 20%;
 }
-.card.products__card-item--03{
+
+.card.products__card-item--03 {
     grid-column: span 2 / span 2;
     grid-row-start: 2;
     height: 150px;
     padding-right: 10%;
 }
-.card.products__card-item--04{
+
+.card.products__card-item--04 {
     grid-column: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 2;
     height: 150px;
-    padding-right: 10%;     
+    padding-right: 10%;
 }
-.card.products__card-item--05{
+
+.card.products__card-item--05 {
     grid-column: span 2 / span 2;
     grid-column-start: 5;
     grid-row-start: 2;
     height: 150px;
-    padding-right: 10%; 
+    padding-right: 10%;
 }
+
 /* カードイメージ */
-.card.products__card-item .img__wrapper{
+.card.products__card-item .img__wrapper {
     width: 120px;
-    height:120px;
+    height: 120px;
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto
 }
+
 .card.products__card-item--03 .img__wrapper,
 .card.products__card-item--04 .img__wrapper,
-.card.products__card-item--05 .img__wrapper{
+.card.products__card-item--05 .img__wrapper {
     width: 100px;
-    height:100px;
+    height: 100px;
 }
-.card.products__card-item .card__img{
+
+.card.products__card-item .card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
 }
+
 /* カード内イメージ（丸抜き）の位置調整 */
-.card.products__card-item--01 .card__img{
+.card.products__card-item--01 .card__img {}
 
-}
-.card.products__card-item--02 .card__img{
+.card.products__card-item--02 .card__img {}
 
-}
-.card.products__card-item--03 .card__img{
+.card.products__card-item--03 .card__img {}
 
-}
-.card.products__card-item--04 .card__img{
+.card.products__card-item--04 .card__img {}
 
-}
-.card.products__card-item--05 .card__img{
+.card.products__card-item--05 .card__img {}
 
-}
-.card.products__card-item .card__text{
+.card.products__card-item .card__text {
     width: 60%;
-    box-shadow:none;
+    box-shadow: none;
     padding: 0;
     font-size: var(--font-size-lg2);
 }
 
 .card.products__card-item--03 .card__text,
 .card.products__card-item--04 .card__text,
-.card.products__card-item--05 .card__text{
-    font-size: var(--font-size-xl);   
+.card.products__card-item--05 .card__text {
+    font-size: var(--font-size-xl);
 }
 
 
 /* featureCaseセクションのカードの上書きデザイン */
-.feature-case__card-item{
-    box-shadow:none;
-    background-color:var(--sub-color);
+.feature-case__card-item {
+    box-shadow: none;
+    background-color: var(--sub-color);
 }
 
-.feature-case__card-item .card__img{
+.feature-case__card-item .card__img {
     border-radius: 28px;
 }
+
 .card.feature-case__card-item .card__text {
-    color: var(--text-color);
+    color: var(--text-color-sub);
     font-weight: var(--font-weight-bold);
     font-size: 1.2rem;
     padding: 1rem 0;
 }
 
 /* 特徴セクションのカードデザイン上書き */
-.feature-spec__card-item{
-    box-shadow:none;
+.feature-spec__card-item {
+    box-shadow: none;
 }
 
-.feature-spec__card-item .card__img{
+.feature-spec__card-item .card__img {
     border-radius: 28px;
 }
+
 .card.feature-spec__card-item .card__text {
     color: var(--text-color);
     font-weight: var(--font-weight-bold);
     font-size: 1.2rem;
     padding: 1rem 0;
+}
+
+
+@media (max-width: 767px) {
+/* featureセクションのカードの上書きデザイン(SP) */
+.card.feature__card-item .card__text{
+    font-size: 18px;
+    padding: 0.75rem;
+    text-align: left;
+    margin: 0;
+}
+
+/* productsセクションのカードの上書きデザイン(SP) */
+    .products__card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card.products__card-item {
+        height: 140px;
+        min-height:0;
+        padding:1rem;
+    }
+
+    .card.products__card-item .img__wrapper {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto
+    }
+
+    
+    .card.products__card-item .card__text {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        padding-right: 1rem;
+        font-size: 18px;
+        line-height: 2;
+        text-align: left;
+    }
+
+/* featureCaseセクションのカードの上書きデザイン(SP) */
+    .card.feature-case__card-item .card__text {
+    font-size:18px;
+    padding: 0.75rem 0;
+    text-align: left;
+}
+
 }

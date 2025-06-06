@@ -11,15 +11,17 @@ interface NewsItemData {
 
 interface Props {
     text: string;
+    subtitle:string;
     newsItems: NewsItemData[];
     buttonHref: string;
 }
 
-const { text, newsItems, buttonHref } = Astro.props;
+const { text, subtitle ,newsItems, buttonHref } = Astro.props;
 ---
 
 <div class="news l-wrapper items-center">
     <div class="news__container l-container flex flex-col items-center">
+        <p class="text-center color-text-sub font-bold en">{subtitle}</p>
         <h2 class="mb-6 font-bold">{text}</h2>
 
         <div class="news-list w-full mb-8">
@@ -43,6 +45,10 @@ const { text, newsItems, buttonHref } = Astro.props;
     .news__container{
         max-width:1000px;
     }
+    .news__container>p{
+        font-size: 20px;
+    }
+
     @media screen and (max-width: 767px) {
         .news {
             height: auto;
