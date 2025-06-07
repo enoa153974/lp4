@@ -15,19 +15,19 @@ const { title, subtitle ,items } = Astro.props as {
 ---
 
 <section id="about" class="about__section l-wrapper">
-    <div class="about__container l-container-full">
+    <div class="about__container l-container-full pt-4">
         <p class="text-center color-text-sub font-bold en">{subtitle}</p>
         <h2 class="text-center">
             {title}
         </h2>
         {
             items.map((item, index) => (
-                <div class="about__item l-inner l-row">
-                        <div class="item__text l-col">
-                            <p class="lead font-bold mb-8">{item.pointTitle}</p>
+                <div class="about__item l-inner l-row pt-4">
+                        <div class="item__text l-col py-20 mt-8">
+                            <p class="lead font-bold mb-8 multi-line-text">{item.pointTitle}</p>
                             <p class="desc">{item.text}</p>
-                    </div>
-                    <img src={item.image} alt={item.alt} class="item__img block l-col" />
+                        </div>
+                    <img src={item.image} alt={item.alt} class="item__img block l-col mb-8" />
                 </div>
             ))
         }
@@ -38,9 +38,6 @@ const { title, subtitle ,items } = Astro.props as {
     /* === デバッグ用各要素アウトライン === */
     * {
         outline: 1px solid red;
-    }
-    .about__container{
-        padding:var(--spacing-xl) 0;
     }
 
     .about__container>p{
@@ -54,8 +51,8 @@ const { title, subtitle ,items } = Astro.props as {
     /* セクションアイテムの共通スタイル */
     .about__item {
         width: 100%;
-        gap:20%;
-        padding: 0;
+        height: auto;
+        gap:16%;
     }
 
     .item__img {
@@ -66,11 +63,15 @@ const { title, subtitle ,items } = Astro.props as {
 
     .item__text {
         width: 40%;
-        padding-top:10%;
+        line-height: 1.7;
     }
 
     .lead {
         font-size: var(--font-size-lg);
+    }
+
+    .desc{
+        font-size: 15px;
     }
 
 @media screen and (max-width: 767px) {

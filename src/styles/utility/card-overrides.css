@@ -6,6 +6,7 @@
 
 .feature__card-item p {
     background-color: #fff;
+    font-size: 19px;
 }
 
 /* productsセクションのカードの上書きデザイン */
@@ -101,6 +102,8 @@
 .card.products__card-item--05 .card__img {}
 
 .card.products__card-item .card__text {
+    display: flex;
+    align-items: center;
     width: 60%;
     box-shadow: none;
     padding: 0;

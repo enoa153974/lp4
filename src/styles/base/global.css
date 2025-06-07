@@ -12,8 +12,9 @@ body {
 }
 
 h1{
-    font-size: var(--font-size-2xl);
+    font-size: clamp(24px, 2.86vw, 40px);
 }
+
 h2{
     font-size: var(--font-size-lg2);
 }

@@ -24,8 +24,7 @@
 /* l-containerの中でさらに絞りたいとき */
 .l-inner {
     width: 100%;
-    max-width: 800px;
-    max-width: 70%;
+    max-width: 69%;
     margin: 0 auto;
     padding: 0;
 }

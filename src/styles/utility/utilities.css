@@ -731,6 +731,9 @@
     clear: both;
 }
 
+    .multi-line-text {
+        white-space: pre-line;
+    }
 /* === heading-line === */
 .u-heading-line {
     position: relative;
