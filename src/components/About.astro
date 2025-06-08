@@ -23,12 +23,12 @@ const { title, subtitle ,items } = Astro.props as {
         {
             items.map((item, index) => (
                 <div class="about__item l-inner l-row pt-4 sm:px-0">
-                        <div class="item__text l-col py-20 px-0 mt-6 sm:py-5 sm:px-5">
+                        <div class="item__text l-col sm:py-5 sm:px-5">
                             <p class="lead font-bold mb-8 multi-line-text sm:normal">{item.pointTitle}</p>
                             <p class="desc font-bold">{item.text}</p>
                         </div>
                         <div class="l-col">
-                            <img src={item.image} alt={item.alt} class="item__img block mb-8 sm:mb-0" />
+                            <img src={item.image} alt={item.alt} class="item__img block sm:mb-0" />
                         </div>
                 </div>
             ))
@@ -49,17 +49,18 @@ const { title, subtitle ,items } = Astro.props as {
     .about__item {
         width: 100%;
         height: auto;
-        gap:16%;
+        gap: clamp(40px, 10.76vw, 155px);
     }
 
     .item__img {
         object-fit: cover;
         border-radius: 50px;
-    }
+        }
 
     .item__text {
         width: 40%;
         line-height: 1.7;
+        padding:clamp(3rem, 6.857vw, 7rem) 0;
     }
 
     .lead {
@@ -96,6 +97,7 @@ const { title, subtitle ,items } = Astro.props as {
         opacity: 80%;
         border-radius: 28px;
         margin-top:var(--spacing-sm2) ;
+        padding:1rem 1.25rem;
     }
     .lead {
         margin-bottom: 1rem;
