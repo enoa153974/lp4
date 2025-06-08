@@ -4,9 +4,9 @@ import Card from './Card.astro'
 
 <section class="feature-spec">
     <div class="l-wrapper">
-        <div class="feature-spec__container l-inner pt-6 sm:py-10">
-            <h2 class="feature-spec__heading font-bold u-heading-line sm:pb-3">特徴</h2>
-            <div class="feature-spec__card flex pt-6 sm:pt-4 sm:px-1">
+        <div class="feature-spec__container l-inner pt-6 sm:pt-10 pb-8">
+            <h2 class="feature-spec__heading font-bold u-heading-line sm:pb-3">特長</h2>
+            <div class="feature-spec__card flex pt-6 sm:pt-4">
                 <Card
                     imgSrc="/assets/image/feature_spec_img_01.jpg"
                     alt=""
@@ -18,7 +18,7 @@ import Card from './Card.astro'
                     imgSrc="/assets/image/feature_spec_img_02.jpg"
                     alt=""
                     text="高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。"
-                    className="feature-spec__card-item"
+                    className="feature-spec__card-item feature-spec__card-item--02"
                 />
 
                 <Card
@@ -36,6 +36,9 @@ import Card from './Card.astro'
     .feature-spec__container{
         max-width: 800px;
     }
+    .feature-spec h2{
+        font-size: 28px;
+    }
     .feature-spec__card{
         gap: 2rem;
     }
@@ -50,6 +53,7 @@ import Card from './Card.astro'
 @media screen and (max-width: 767px) {
     .feature-spec__card{
         flex-direction: column;
+        gap: 1.25rem;
     } 
 
         .feature-spec__heading{

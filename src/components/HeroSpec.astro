@@ -1,6 +1,6 @@
 <section class="hero-spec">
     <div class="l-wrapper">
-        <div class="l-container position-relative pt-12 px-0 sm:pt-5">
+        <div class="hero-spec__container l-container position-relative pt-12 px-0 sm:pt-5">
             <div class="hero-spec__img-wrapper">
                 <img src="/assets/image/hero_spec_main.jpg" alt="" class="hero-spec__img mb-auto" />
             </div>
@@ -48,10 +48,11 @@
         border-bottom-left-radius: 10px;
     }
     @media screen and (width <=47.9375rem) {
+        
         .hero-spec__img-wrapper {
             width: 100%;
-            height: 230px;
             border-radius: 28px;
+            aspect-ratio: 358 / 230;   
         }
         .hero-spec__img {
             display: block;

@@ -60,7 +60,7 @@
     /* 通常 */
     --font-weight-normal: 400;
     /* セミボールド（中太字） */
-    --font-weight-semibold: 500;
+    --font-weight-semibold: 600;
     /* ボールド（太字） */
     --font-weight-bold: 700;
 
@@ -153,5 +153,41 @@
 
         /* 5xl: 48px〜72px */
         --font-size-5xl: clamp(3rem, 18.46vw, 4.5rem);
+
+/* === スペーシング（可変 / 基準：390px）=== */
+
+/* spacing-xs: 4px〜8px → 中間6px（390px時） */
+--spacing-xs: clamp(0.25rem, 1.538vw, 0.5rem); 
+
+/* spacing-xs2: 6px〜12px → 中間9px（390px時） */
+--spacing-xs2: clamp(0.375rem, 2.307vw, 0.75rem);
+
+/* spacing-sm: 8px〜16px → 中間12px（390px時） */
+--spacing-sm: clamp(0.5rem, 3.076vw, 1rem); 
+
+/* spacing-sm2: 10px〜20px → 中間15px（390px時） */
+--spacing-sm2: clamp(0.625rem, 3.846vw, 1.25rem); 
+
+/* spacing-base: 18px〜24px → 中間21px（390px時） */
+--spacing-base: clamp(1.125rem, 5.384vw, 1.5rem);
+
+/* spacing-base2: 14px〜28px → 中間21px（390px時） */
+--spacing-base2: clamp(0.875rem, 5.384vw, 1.75rem); 
+
+/* spacing-lg: 18px〜32px → 中間25px（390px時） */
+--spacing-lg: clamp(1.125rem, 6.41vw, 2rem); 
+
+/* spacing-lg2: 20px〜40px → 中間30px（390px時） */
+--spacing-lg2: clamp(1.25rem, 7.692vw, 2.5rem); 
+
+/* spacing-lg3: 22px〜42px → 中間32px（390px時） */
+--spacing-lg3: clamp(1.375rem, 8.205vw, 2.625rem); 
+
+/* spacing-xl: 24px〜48px → 中間36px（390px時） */
+--spacing-xl: clamp(1.5rem, 9.23vw, 3rem); 
+
+
     }
+
+    
 }

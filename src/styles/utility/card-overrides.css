@@ -4,7 +4,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.feature__card-item .img__wrapper{
+.feature__card-item .img__wrapper {
     width: 100%;
     max-height: 226px;
     border-top-left-radius: 28px;
@@ -12,8 +12,11 @@
     overflow: hidden;
 }
 
+.feature__card-item--02 .card__img {
+    filter:brightness(140%) contrast(85%) saturate(110%) hue-rotate(5deg);
+}
 
-.feature__card-item .card__text{
+.feature__card-item .card__text {
     background-color: #fff;
     font-size: 19px;
 }
@@ -185,7 +188,7 @@
 .card.feature-spec__card-item .card__text {
     color: var(--text-color);
     font-weight: var(--font-weight-bold);
-    font-size:18px;
+    font-size: 18px;
     padding: 1rem 0;
     line-height: 1.7;
 }
@@ -195,9 +198,19 @@
 
     /* featureセクションのカードの上書きデザイン(SP) */
     .feature__card-item .img__wrapper {
-        max-height: 201px;
-        
+        aspect-ratio: 358 / 201;
     }
+
+    
+.feature__card-item--01 .card__img {
+    transform: scale(1) translateX(-1%) translateY(-13%);
+}
+
+
+.feature__card-item--03 .card__img {
+    transform: scale(1) translateX(0%) translateY(-6%);
+}
+
 
     .card.feature__card-item .card__text {
         font-size: 18px;
@@ -247,7 +260,7 @@
     .feature-case__card-item .img__wrapper {
         width: 100%;
         height: auto;
-        max-height: 201px;
+        aspect-ratio: 358 / 201;
     }
 
     .feature-case__card-item .card__img {
@@ -276,16 +289,24 @@
     }
 
     /* 特徴セクションのカードデザイン上書き(SP) */
+    .feature-spec__card-item .img__wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 358 / 210;
+        border-radius: 28px;
+        overflow: hidden;
+    }
 
-.card.feature-spec__card-item .card__img {
-    border-radius: 18px;
-}
-.card.feature-spec__card-item .card__text {
-    color: var(--text-color);
-    font-weight: var(--font-weight-bold);
-    font-size:18px;
-    padding: 1rem 0;
-    text-align: left;
-}
+    .feature-spec__card-item .card__img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card.feature-spec__card-item .card__text {
+        font-size: 18px;
+        text-align: left;
+        padding: 0.5rem 0;
+        letter-spacing: 0.03em;
+    }
 
 }

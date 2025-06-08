@@ -1,5 +1,5 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="l-header flex items-center">
@@ -15,14 +15,18 @@
             <!-- メニュー -->
             <!-- PCナビ -->
             <nav class="header__nav pc-nav">
-                <ul class="header__nav-inner flex items-center">
-                    <li><a href="/src/pages/spec.astro">価格・スペック</a></li>
-                    <li><a href="/src/pages/faq.astro">よくあるご質問</a></li>
+                <ul class="header__nav-inner flex items-center font-bold">
+                    <li>
+                        <a href="/spec" class={currentPath === '/spec' ? 'is-active' : ''}>価格・スペック</a>
+                    </li>
+                    <li>
+                        <a href="/faq" class={currentPath === '/faq' ? 'is-active' : ''}>よくあるご質問</a>
+                    </li>
                 </ul>
             </nav>
 
             <!-- スマホナビ -->
-            <nav id="global-nav" class="sp-nav">
+            <nav id="global-nav" class="sp-nav font-bold">
                 <ul>
                     <li><a href="/">トップ</a></li>
                     <li><a href="/src/pages/spec.astro">価格・スペック</a></li>
@@ -57,6 +61,43 @@
         gap: 2rem;
     }
 
+    .header__nav-inner a.is-active {
+        color: var(--text-color-sub);
+        font-weight: bold;
+    }
+
+    .header__nav-inner a,
+    .sp-nav a {
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
+    .header__nav-inner a::after,
+    .sp-nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--text-color-sub);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .header__nav-inner a:hover,
+    .sp-nav a:hover {
+        color: var(--text-color-sub);
+    }
+
+    .header__nav-inner a:hover::after,
+    .sp-nav a:hover::after {
+        transform: scaleX(1);
+    }
+
     @media (max-width: 47.9375rem) {
         .l-header {
             height: var(--sp-header-height);
@@ -72,10 +113,9 @@
             justify-content: space-between;
         }
 
-        
-    .header__logo img {
-        width: 60%;
-    }
+        .header__logo img {
+            width: 60%;
+        }
 
         .sp-nav {
             display: block;
