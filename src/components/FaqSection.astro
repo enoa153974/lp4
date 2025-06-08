@@ -5,8 +5,8 @@ interface Props {
 }
 interface FaqItem {
     question: string;
-    category01:string;
-    category02:string;
+    category01: string;
+    category02: string;
     answer: string;
 }
 
@@ -22,20 +22,29 @@ import '../styles/components/accordion.css';
     </h2>
 
     <div class="faq-section__inner l-inner">
-        {items.map((item) => <AccordionItem question={item.question} answer={item.answer} category01={item.category01} category02={item.category02}/>)}
+        {
+            items.map((item) => (
+                <AccordionItem
+                    question={item.question}
+                    answer={item.answer}
+                    category01={item.category01}
+                    category02={item.category02}
+                />
+            ))
+        }
     </div>
 </section>
 
 <style>
-    .faq-section{
+    .faq-section {
     }
     @media (max-width: 767px) {
-        .faq-section__inner{
+        .faq-section__inner {
             padding: 0;
         }
 
-        .faq-section{
-        margin-bottom: 120px;
-    }
+        .faq-section {
+            margin-bottom: 120px;
+        }
     }
 </style>

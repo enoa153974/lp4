@@ -20,6 +20,8 @@ const pageId = 'spec',
         }
     ];
 
+const currentPath = '/spec'; 
+
 //表の配列
 const droneData = [
     { heading: 'ドローン名', text: 'アグリ・ファルコン' },
@@ -42,6 +44,7 @@ const droneData = [
     type={pageMeta.type}
     path={pageMeta.path}
     ldJSON={ldJSON}
+    currentPath={currentPath}
 >
     <HeroSpec />
     <Gallery

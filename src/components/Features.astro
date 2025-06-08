@@ -1,13 +1,13 @@
 ---
-import Card from './Card.astro'
+import Card from './Card.astro';
 ---
 
 <section class="feature">
     <div class="l-wrapper bg-sub">
-        <div class="feature__container l-container py-14 px-4 sm:pt-4 ">
+        <div class="feature__container l-container py-14 px-4 sm:pt-4">
             <p class="text-center color-text-sub font-semibold en">Features</p>
             <h2 class="feature__heading text-center font-bold">私たちが選ばれる3つの理由</h2>
-            
+
             <div class="feature__card flex pt-6 font-bold sm:pt-4">
                 <Card
                     imgSrc="/assets/image/feature_img_01.jpg"
@@ -35,24 +35,23 @@ import Card from './Card.astro'
 </section>
 
 <style>
-    .feature__container>p{
+    .feature__container > p {
         font-size: 20px;
     }
-    .feature__card{
+    .feature__card {
         gap: 2rem;
-}
-@media screen and (max-width: 767px) {
-
-    .feature__container>p{
-           font-size: 1rem;
     }
+    @media screen and (max-width: 767px) {
+        .feature__container > p {
+            font-size: 1rem;
+        }
 
-    .feature__heading{
-    font-size: var(--font-size-lg)
+        .feature__heading {
+            font-size: var(--font-size-lg);
+        }
+        .feature__card {
+            flex-direction: column;
+            gap: 1.3rem;
+        }
     }
-    .feature__card{
-        flex-direction: column;
-        gap: 1.3rem;
-}
-}
 </style>

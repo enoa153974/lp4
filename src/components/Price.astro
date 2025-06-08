@@ -12,7 +12,9 @@ const { droneData } = Astro.props;
     <div class="price__container l-container pt-10 px-1 pb-18 sm:pt-2 sm:pb-16">
         <div class="l-inner sm:px-2">
             <h2 class="font-bold u-heading-line mb-4 sm:mb-0 sm:pb-2">メーカー希望小売価格</h2>
-            <p class="en font-bold mb-12 sm:mt-2"><span class="jp font-bold">￥</span>550,000<span class="tax-label font-bold">（税込）</span></p>
+            <p class="en font-bold mb-12 sm:mt-2">
+                <span class="jp font-bold">￥</span>550,000<span class="tax-label font-bold">（税込）</span>
+            </p>
             <h2 class="font-bold u-heading-line sm:pb-2">スペック</h2>
             <div class="px-8 sm:px-1">
                 <h3 class="font-bold u-border-left sm:my-4">機体</h3>
@@ -26,33 +28,30 @@ const { droneData } = Astro.props;
     .price__container {
         max-width: 1180px;
     }
-    p{
+    p {
         font-size: var(--font-size-xl2);
     }
-    
-    .price__container h3{
-    margin-block: 28px;
+
+    .price__container h3 {
+        margin-block: 28px;
     }
 
-    .tax-label{
+    .tax-label {
         font-size: var(--font-size-base);
     }
     @media screen and (max-width: 767px) {
+        .price__container h2 {
+            font-size: 22px;
+        }
+        .u-border-left::before {
+            width: 3px;
+            height: 2rem;
+        }
 
-    .price__container h2{
-    font-size: 22px;
+        .price__container h3 {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
     }
-.u-border-left::before {
-        width: 3px;
-        height: 2rem;
-}
-
-    .price__container h3{
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-    }
-}
-
-
 </style>

@@ -13,11 +13,9 @@ const { title, gallerys } = Astro.props as Props;
 
 <section class="gallery l-wrapper pt-12 sm:pt-8">
     <div class="l-container">
-
         <div class="slider l-inner">
             <h2 class="gallery__heading u-heading-line font-bold">{title}</h2>
             <div class="slider__wrapper flex flex-col pt-8 sm:pt-0">
-
                 <div class="slider__track autoplay sm:justify-center">
                     {
                         gallerys.map((gallerys: gallerys, i: number) => (
@@ -32,7 +30,6 @@ const { title, gallerys } = Astro.props as Props;
             </div>
 
             <div class="slider__dots flex justify-center items-center"></div>
-
         </div>
     </div>
 </section>
@@ -42,7 +39,7 @@ const { title, gallerys } = Astro.props as Props;
         .gallery {
             width: 100%;
         }
-        .gallery__heading{
+        .gallery__heading {
             font-size: 22px;
             padding-bottom: 0.5rem;
         }

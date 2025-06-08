@@ -18,14 +18,13 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
     <div class="news-title font-bold pl-2">{title}</div>
 </div>
 
-
 <style>
     .news-item {
         gap: 16px;
         border-top: 0.01px solid #ddd;
         border-bottom: 0.01px solid #ddd;
     }
-    .news-item__inner{
+    .news-item__inner {
         width: 25%;
         gap: 1rem;
     }
@@ -49,24 +48,24 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
     }
     .news-title {
         flex: 1;
-        color:var(--text-color-sub);
+        color: var(--text-color-sub);
         font-size: 15px;
     }
-@media (max-width: 767px) {
-    .news-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    @media (max-width: 767px) {
+        .news-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
-    .news-item__inner{
-        display: flex;
-        width: 100%;
+        .news-item__inner {
+            display: flex;
+            width: 100%;
+        }
+        .news-badge {
+            width: 37%;
+        }
+        .news-title {
+            padding: 0;
+        }
     }
-    .news-badge  {
-        width:37%;
-    }
-    .news-title {
-        padding: 0;
-    }
-}
 </style>

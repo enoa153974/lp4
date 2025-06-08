@@ -1,5 +1,5 @@
 ---
-import Card from './Card.astro'
+import Card from './Card.astro';
 ---
 
 <section class="feature-case">
@@ -7,7 +7,7 @@ import Card from './Card.astro'
         <div class="feature-case__container l-container py-15 px-3 sm:py-10">
             <p class="text-center color-text-sub font-semibold en">Case</p>
             <h2 class="feature-case__heading text-center font-bold">お客様の事例紹介</h2>
-            
+
             <div class="feature-case__card flex pt-6 sm:pt-4 sm:px-1">
                 <Card
                     imgSrc="/assets/image/case_img_01.jpg"
@@ -35,26 +35,25 @@ import Card from './Card.astro'
 </section>
 
 <style>
-    .feature-case__container>p{
+    .feature-case__container > p {
         font-size: 20px;
     }
-    .feature-case__card{
+    .feature-case__card {
         gap: 2rem;
     }
 
-@media screen and (max-width: 767px) {
-    .feature-case__card{
-        flex-direction: column;
-        gap:0.75rem;
-    }
+    @media screen and (max-width: 767px) {
+        .feature-case__card {
+            flex-direction: column;
+            gap: 0.75rem;
+        }
 
-        .feature-case__container>p{
-           font-size: 1rem;
-    }
+        .feature-case__container > p {
+            font-size: 1rem;
+        }
 
-    
-    .feature-case__heading{
-    font-size: var(--font-size-lg)
+        .feature-case__heading {
+            font-size: var(--font-size-lg);
+        }
     }
-}
 </style>

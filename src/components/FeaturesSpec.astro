@@ -1,5 +1,5 @@
 ---
-import Card from './Card.astro'
+import Card from './Card.astro';
 ---
 
 <section class="feature-spec">
@@ -33,32 +33,30 @@ import Card from './Card.astro'
 </section>
 
 <style>
-    .feature-spec__container{
+    .feature-spec__container {
         max-width: 800px;
     }
-    .feature-spec h2{
+    .feature-spec h2 {
         font-size: 28px;
     }
-    .feature-spec__card{
+    .feature-spec__card {
         gap: 2rem;
     }
 
-    .under-line{
+    .under-line {
         background-color: var(--accent-color);
         width: 100%;
         height: 5px;
     }
 
-    
-@media screen and (max-width: 767px) {
-    .feature-spec__card{
-        flex-direction: column;
-        gap: 1.25rem;
-    } 
+    @media screen and (max-width: 767px) {
+        .feature-spec__card {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
 
-        .feature-spec h2{
-    font-size:22px;
+        .feature-spec h2 {
+            font-size: 22px;
+        }
     }
-}
-
 </style>

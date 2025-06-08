@@ -1,6 +1,6 @@
 ---
 import siteData from '../../siteData.mjs';
-const currentPath = Astro.url.pathname;
+const { currentPath } = Astro.props;
 ---
 
 <header class="l-header flex items-center">
@@ -18,10 +18,12 @@ const currentPath = Astro.url.pathname;
             <nav class="header__nav pc-nav">
                 <ul class="header__nav-inner flex items-center font-bold">
                     <li>
-                        <a  href={siteData.spec.path} class={currentPath === '/spec' ? 'is-active' : ''}>価格・スペック</a>
+                        <a href={siteData.spec.path} class={currentPath === '/spec' ? 'is-active' : ''}
+                            >価格・スペック</a
+                        >
                     </li>
                     <li>
-                        <a  href={siteData.faq.path} class={currentPath === '/faq' ? 'is-active' : ''}>よくあるご質問</a>
+                        <a href={siteData.faq.path} class={currentPath === '/faq' ? 'is-active' : ''}>よくあるご質問</a>
                     </li>
                 </ul>
             </nav>

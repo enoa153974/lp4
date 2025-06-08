@@ -7,9 +7,9 @@ interface AboutItem {
     text: string;
 }
 
-const { title, subtitle ,items } = Astro.props as {
+const { title, subtitle, items } = Astro.props as {
     title: string;
-    subtitle:string;
+    subtitle: string;
     items: AboutItem[];
 };
 ---
@@ -23,13 +23,13 @@ const { title, subtitle ,items } = Astro.props as {
         {
             items.map((item, index) => (
                 <div class="about__item l-inner l-row pt-4 sm:px-0">
-                        <div class="item__text l-col sm:py-5 sm:px-5">
-                            <p class="lead font-bold mb-8 multi-line-text sm:normal">{item.pointTitle}</p>
-                            <p class="desc font-bold">{item.text}</p>
-                        </div>
-                        <div class="l-col">
-                            <img src={item.image} alt={item.alt} class="item__img block sm:mb-0" />
-                        </div>
+                    <div class="item__text l-col sm:py-5 sm:px-5">
+                        <p class="lead font-bold mb-8 multi-line-text sm:normal">{item.pointTitle}</p>
+                        <p class="desc font-bold">{item.text}</p>
+                    </div>
+                    <div class="l-col">
+                        <img src={item.image} alt={item.alt} class="item__img block sm:mb-0" />
+                    </div>
                 </div>
             ))
         }
@@ -37,7 +37,7 @@ const { title, subtitle ,items } = Astro.props as {
 </section>
 
 <style>
-    .about__container>p{
+    .about__container > p {
         font-size: 20px;
     }
 
@@ -56,57 +56,57 @@ const { title, subtitle ,items } = Astro.props as {
     .item__img {
         object-fit: cover;
         border-radius: 50px;
-        }
+    }
 
     .item__text {
         width: 40%;
         line-height: 1.7;
-        padding:clamp(3rem, 6.857vw, 7rem) 0;
+        padding: clamp(3rem, 6.857vw, 7rem) 0;
     }
 
     .lead {
         font-size: var(--font-size-lg);
     }
 
-    .desc{
+    .desc {
         font-size: 15px;
     }
 
-@media screen and (max-width: 767px) {
-    .about__container>p{
-        font-size: 1rem;
-    }
-    .about__section h2 {
-        font-size: var(--font-size-lg);
-    }
-    .about__item{
-        position:relative;
-        gap: 0;
-    }
-    .item__img {
-        width:100%;
-        max-height:545px;
-        border-radius:0;
-    }
+    @media screen and (max-width: 767px) {
+        .about__container > p {
+            font-size: 1rem;
+        }
+        .about__section h2 {
+            font-size: var(--font-size-lg);
+        }
+        .about__item {
+            position: relative;
+            gap: 0;
+        }
+        .item__img {
+            width: 100%;
+            max-height: 545px;
+            border-radius: 0;
+        }
 
-    .item__text{
-        position:absolute;
-        top:5%;
-        left: 5%;
-        width: 90%;
-        background-color: #fff;
-        opacity: 80%;
-        border-radius: 28px;
-        margin-top:var(--spacing-sm2) ;
-        padding:1rem 1.25rem;
-    }
-    .lead {
-        margin-bottom: 1rem;
-        font-size: clamp(0.875rem, 4.615vw, 1.125rem);
-    }
+        .item__text {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            background-color: #fff;
+            opacity: 80%;
+            border-radius: 28px;
+            margin-top: var(--spacing-sm2);
+            padding: 1rem 1.25rem;
+        }
+        .lead {
+            margin-bottom: 1rem;
+            font-size: clamp(0.875rem, 4.615vw, 1.125rem);
+        }
 
-       .desc {
-        font-size:var(--font-size-sm);
-}
-}
+        .desc {
+            font-size: var(--font-size-sm);
+        }
+    }
 </style>

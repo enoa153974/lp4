@@ -1,9 +1,6 @@
 /** @type {import('stylelint').Config} */
 export default {
-    extends: [
-        'stylelint-config-html/html',
-        'stylelint-config-html/astro',
-    ],
+    extends: ['stylelint-config-html/html', 'stylelint-config-html/astro'],
     plugins: ['stylelint-scss', 'stylelint-prettier'],
     overrides: [
         {

@@ -44,6 +44,7 @@
 }
 
 .faq__question {
+    display: block;
     font-weight: 900;
     font-size: 18px;
     margin: 0;

@@ -20,6 +20,7 @@ const pageId = 'home',
             }
         }
     ];
+const currentPath = '/'; 
 ---
 
 <!--BaseLayout.hemlの<slot />内に代入される -->
@@ -31,6 +32,7 @@ const pageId = 'home',
     type={pageMeta.type}
     path={pageMeta.path}
     ldJSON={ldJSON}
+    currentPath={currentPath}
 >
     <Hero />
 
@@ -71,22 +73,21 @@ const pageId = 'home',
                 category: 'ニュースリリース',
                 title: '害虫撃退！キラメキファームの自然環境に優しい取り組み'
             },
-                        {
+            {
                 date: '2023.02.01',
                 category: 'お知らせ',
                 title: 'キラメキファーム×最新ドローン技術 目覚ましい成果発表'
             },
-                        {
+            {
                 date: '2023.01.25',
                 category: 'ニュースリリース',
                 title: 'キラメキファーム、無農薬野菜で子供たちの未来を支える'
             },
-                        {
+            {
                 date: '2023.01.08',
                 category: 'お知らせ',
                 title: 'キラメキ農法で収穫量2倍！革新的な農業技術が話題'
-            },
+            }
         ]}
     />
-    
 </BaseLayout>
