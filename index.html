@@ -1,288 +1,331 @@
 <!DOCTYPE html>
-<!--BaseLayout.hemlの<slot />内に代入される --><html lang="ja" data-theme="light">
-    <head>
-        <!-- meta情報 -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--BaseLayout.hemlの<slot />内に代入される -->
+<html lang="ja" data-theme="light">
 
-        <!--ページタイトル-->
-        <title>持続可能な未来農業を実現 | Kirameki Farm</title>
+<head>
+    <!-- meta情報 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ページ個別メタデータ -->
-        <meta name="description" content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
-        <meta property="og:title" content="持続可能な未来農業を実現 | Kirameki Farm">
-        <meta property="og:description" content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
-        <meta property="og:type" content="article">
-        <meta property="og:url" content="https://example.com/">
-        <meta property="og:image" content="https://example.com">
-        <meta property="og:site_name" content="KiramekiFarm">
+    <!--ページタイトル-->
+    <title>持続可能な未来農業を実現 | Kirameki Farm</title>
 
-        <!-- 外部フォント-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <!-- Noto Sans JP -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <!-- Montserrat -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- ページ個別メタデータ -->
+    <meta name="description"
+        content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
+    <meta property="og:title" content="持続可能な未来農業を実現 | Kirameki Farm">
+    <meta property="og:description"
+        content="Kirameki Farmは革新的な農業機器とビッグデータ、自動運転のロボット、リジェネラティブ農業を駆使して持続可能な農業を目指すイノベーション企業です。次世代の子どもたちに環境に優しい未来農業を残すために、効率化と環境配慮を融合した活動を推進しています。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://example.com">
+    <meta property="og:site_name" content="KiramekiFarm">
 
-        <!-- ライブラリのcss/publicから読み込み -->
-        <link rel="stylesheet" href="/assets/style/slick.css">
-        <link rel="stylesheet" href="/assets/style/slick-theme.css">
+    <!-- 外部フォント-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- ライブラリのcss/publicから読み込み -->
+    <link rel="stylesheet" href="/assets/style/slick.css">
+    <link rel="stylesheet" href="/assets/style/slick-theme.css">
     <link rel="stylesheet" href="/assets/style/style.min.css">
-<link rel="stylesheet" href="/assets/style/style.min3.css">
-<link rel="stylesheet" href="/assets/style/style.min4.css"></head>
+    <link rel="stylesheet" href="/assets/style/style.min3.css">
+    <link rel="stylesheet" href="/assets/style/style.min4.css">
+</head>
 
-    <body class="has-fixed-header">
-        <header class="l-header flex items-center" data-astro-cid-3ef6ksr2>
-    <div class="header__container l-container flex items-center px-6" data-astro-cid-3ef6ksr2>
-        <div class="header__inner flex w-full" data-astro-cid-3ef6ksr2>
-            <a href="/" class="header__logo block flex items-center" data-astro-cid-3ef6ksr2><img src="/assets/image/logo.png" alt="" data-astro-cid-3ef6ksr2></a>
+<body class="has-fixed-header">
+    <header class="l-header flex items-center" data-astro-cid-3ef6ksr2>
+        <div class="header__container l-container flex items-center px-6" data-astro-cid-3ef6ksr2>
+            <div class="header__inner flex w-full" data-astro-cid-3ef6ksr2>
+                <a href="/" class="header__logo block flex items-center" data-astro-cid-3ef6ksr2><img
+                        src="/assets/image/logo.png" alt="KiramekiFarm" data-astro-cid-3ef6ksr2></a>
 
-            <!-- ハンバーガーボタン（SP用） -->
-            <button class="hamburger openbtn" aria-label="メニューを開く" data-astro-cid-3ef6ksr2>
-                <span data-astro-cid-3ef6ksr2></span><span data-astro-cid-3ef6ksr2></span><span data-astro-cid-3ef6ksr2></span>
-            </button>
+                <!-- ハンバーガーボタン（SP用） -->
+                <button class="hamburger openbtn" aria-label="メニューを開く" data-astro-cid-3ef6ksr2>
+                    <span data-astro-cid-3ef6ksr2></span><span data-astro-cid-3ef6ksr2></span><span
+                        data-astro-cid-3ef6ksr2></span>
+                </button>
 
-            <!-- メニュー -->
-            <!-- PCナビ -->
-            <nav class="header__nav pc-nav" data-astro-cid-3ef6ksr2>
-                <ul class="header__nav-inner flex items-center font-bold" data-astro-cid-3ef6ksr2>
-                    <li data-astro-cid-3ef6ksr2>
-                        <a href="/spec" class data-astro-cid-3ef6ksr2>価格・スペック</a>
-                    </li>
-                    <li data-astro-cid-3ef6ksr2>
-                        <a href="/faq" class data-astro-cid-3ef6ksr2>よくあるご質問</a>
-                    </li>
-                </ul>
-            </nav>
+                <!-- メニュー -->
+                <!-- PCナビ -->
+                <nav class="header__nav pc-nav" data-astro-cid-3ef6ksr2>
+                    <ul class="header__nav-inner flex items-center font-bold" data-astro-cid-3ef6ksr2>
+                        <li data-astro-cid-3ef6ksr2>
+                            <a href="/spec" class data-astro-cid-3ef6ksr2>価格・スペック</a>
+                        </li>
+                        <li data-astro-cid-3ef6ksr2>
+                            <a href="/faq" class data-astro-cid-3ef6ksr2>よくあるご質問</a>
+                        </li>
+                    </ul>
+                </nav>
 
-            <!-- スマホナビ -->
-            <nav id="global-nav" class="sp-nav font-bold" data-astro-cid-3ef6ksr2>
-                <ul data-astro-cid-3ef6ksr2>
-                    <li data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>トップ</a></li>
-                    <li data-astro-cid-3ef6ksr2><a href="/spec" data-astro-cid-3ef6ksr2>価格・スペック</a></li>
-                    <li data-astro-cid-3ef6ksr2><a href="/faq" data-astro-cid-3ef6ksr2>よくあるご質問</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-
-        <main>
-            
-    <section class="hero" data-astro-cid-bbe6dxrz>
-    <div class="l-wrapper" data-astro-cid-bbe6dxrz>
-        <div class="l-container py-10 px-4 sm:py-3 sm:px-4" data-astro-cid-bbe6dxrz>
-            <div class="hero__text l-row mb-16 px-6 sm:flex-col sm:px-0 sm:mb-6" data-astro-cid-bbe6dxrz>
-                <div class="l-col font-bold" data-astro-cid-bbe6dxrz>
-                    <h1 data-astro-cid-bbe6dxrz>持続可能な農業を目指す</h1>
-                </div>
-                <div class="l-col font-bold pt-1 pl-6 sm:pt-0 sm:px-0" data-astro-cid-bbe6dxrz>
-                    <p data-astro-cid-bbe6dxrz>
-                        キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。
-                    </p>
-                </div>
-            </div>
-            <div class="hero__img-wrapper" data-astro-cid-bbe6dxrz>
-                <img src="/assets/image/hero_top_main.jpg" alt="" class="hero__img" data-astro-cid-bbe6dxrz>
+                <!-- スマホナビ -->
+                <nav id="global-nav" class="sp-nav font-bold" data-astro-cid-3ef6ksr2>
+                    <ul data-astro-cid-3ef6ksr2>
+                        <li data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>トップ</a></li>
+                        <li data-astro-cid-3ef6ksr2><a href="/spec" data-astro-cid-3ef6ksr2>価格・スペック</a></li>
+                        <li data-astro-cid-3ef6ksr2><a href="/faq" data-astro-cid-3ef6ksr2>よくあるご質問</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-    <section id="about" class="about__section l-wrapper pt-4 pb-6 sm:pt-10 sm:pb-0" data-astro-cid-v2cbyr3p>
-    <div class="about__container l-container-full" data-astro-cid-v2cbyr3p>
-        <p class="text-center color-text-sub font-semibold en" data-astro-cid-v2cbyr3p>About Us</p>
-        <h2 class="text-center" data-astro-cid-v2cbyr3p>
-            私たちについて
-        </h2>
-        <div class="about__item l-inner l-row pt-4 sm:px-0" data-astro-cid-v2cbyr3p>
+    <main>
+
+        <section class="hero" data-astro-cid-bbe6dxrz>
+            <div class="l-wrapper" data-astro-cid-bbe6dxrz>
+                <div class="l-container py-10 px-4 sm:py-3 sm:px-4" data-astro-cid-bbe6dxrz>
+                    <div class="hero__text l-row mb-16 px-6 sm:flex-col sm:px-0 sm:mb-6" data-astro-cid-bbe6dxrz>
+                        <div class="l-col font-bold" data-astro-cid-bbe6dxrz>
+                            <h1 data-astro-cid-bbe6dxrz>持続可能な農業を目指す</h1>
+                        </div>
+                        <div class="l-col font-bold pt-1 pl-6 sm:pt-0 sm:px-0" data-astro-cid-bbe6dxrz>
+                            <p data-astro-cid-bbe6dxrz>
+                                キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hero__img-wrapper" data-astro-cid-bbe6dxrz>
+                        <img src="/assets/image/hero_top_main.jpg" alt="" class="hero__img" data-astro-cid-bbe6dxrz>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about__section l-wrapper pt-4 pb-6 sm:pt-10 sm:pb-0" data-astro-cid-v2cbyr3p>
+            <div class="about__container l-container-full" data-astro-cid-v2cbyr3p>
+                <p class="text-center color-text-sub font-semibold en" data-astro-cid-v2cbyr3p>About Us</p>
+                <h2 class="text-center" data-astro-cid-v2cbyr3p>
+                    私たちについて
+                </h2>
+                <div class="about__item l-inner l-row pt-4 sm:px-0" data-astro-cid-v2cbyr3p>
                     <div class="item__text l-col sm:py-5 sm:px-5" data-astro-cid-v2cbyr3p>
-                        <p class="lead font-bold mb-8 multi-line-text sm:normal" data-astro-cid-v2cbyr3p>キラメキファームは、これからの農業を
-次世代の子どもたちに残すために
-創設されたイノベーションカンパニーです。</p>
-                        <p class="desc font-bold" data-astro-cid-v2cbyr3p>キラメキファームは革新的デザインと最新技術を活用した農業機器メーカーです。未来の農業を実現するために、ビッグデータを駆使して省エネルギー・効率化を実現し、自動運転技術を搭載したロボットで一年中稼働することができる機器を提供します。リジェネラティブ農業を実現する技術を用いて、持続可能な農業システムをサポートします。私たちの社是は、次世代の子供たちに豊かな地球環境を残すこと。イノベーションを起こすことで農業に新たな価値を生み出し、地球環境保全に貢献することを目指しています。</p>
+                        <p class="lead font-bold mb-8 multi-line-text sm:normal" data-astro-cid-v2cbyr3p>
+                            キラメキファームは、これからの農業を
+                            次世代の子どもたちに残すために
+                            創設されたイノベーションカンパニーです。</p>
+                        <p class="desc font-bold" data-astro-cid-v2cbyr3p>
+                            キラメキファームは革新的デザインと最新技術を活用した農業機器メーカーです。未来の農業を実現するために、ビッグデータを駆使して省エネルギー・効率化を実現し、自動運転技術を搭載したロボットで一年中稼働することができる機器を提供します。リジェネラティブ農業を実現する技術を用いて、持続可能な農業システムをサポートします。私たちの社是は、次世代の子供たちに豊かな地球環境を残すこと。イノベーションを起こすことで農業に新たな価値を生み出し、地球環境保全に貢献することを目指しています。
+                        </p>
                     </div>
                     <div class="l-col" data-astro-cid-v2cbyr3p>
-                        <img src="/assets/image/about_us_img.jpg" alt class="item__img block sm:mb-0" data-astro-cid-v2cbyr3p>
+                        <img src="/assets/image/about_us_img.jpg" alt="" class="item__img block sm:mb-0"
+                            data-astro-cid-v2cbyr3p>
                     </div>
                 </div>
-    </div>
-</section>
+            </div>
+        </section>
 
-    <section class="feature" data-astro-cid-vnivfuh2>
-    <div class="l-wrapper bg-sub" data-astro-cid-vnivfuh2>
-        <div class="feature__container l-container py-14 px-4 sm:pt-4" data-astro-cid-vnivfuh2>
-            <p class="text-center color-text-sub font-semibold en" data-astro-cid-vnivfuh2>Features</p>
-            <h2 class="feature__heading text-center font-bold" data-astro-cid-vnivfuh2>私たちが選ばれる3つの理由</h2>
+        <section class="feature" data-astro-cid-vnivfuh2>
+            <div class="l-wrapper bg-sub" data-astro-cid-vnivfuh2>
+                <div class="feature__container l-container py-14 px-4 sm:pt-4" data-astro-cid-vnivfuh2>
+                    <p class="text-center color-text-sub font-semibold en" data-astro-cid-vnivfuh2>Features</p>
+                    <h2 class="feature__heading text-center font-bold" data-astro-cid-vnivfuh2>私たちが選ばれる3つの理由</h2>
 
-            <div class="feature__card flex pt-6 font-bold sm:pt-4" data-astro-cid-vnivfuh2>
-                <div class="card feature__card-item feature__card-item--01" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/feature_img_01.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>農業の未来と革新的デザイン性で最新鋭の機能を完備</p>
-</div>
+                    <div class="feature__card flex pt-6 font-bold sm:pt-4" data-astro-cid-vnivfuh2>
+                        <div class="card feature__card-item feature__card-item--01" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/feature_img_01.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>農業の未来と革新的デザイン性で最新鋭の機能を完備</p>
+                        </div>
 
-                <div class="card feature__card-item feature__card-item--02" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/feature_img_02.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>ビッグデータを駆使して、省電力・効率化を実現</p>
-</div>
+                        <div class="card feature__card-item feature__card-item--02" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/feature_img_02.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>ビッグデータを駆使して、省電力・効率化を実現</p>
+                        </div>
 
-                <div class="card feature__card-item feature__card-item--03" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/feature_img_03.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>自動運転技術を搭載したロボットで一年中稼働することができる</p>
-</div>
+                        <div class="card feature__card-item feature__card-item--03" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/feature_img_03.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>自動運転技術を搭載したロボットで一年中稼働することができる</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" data-astro-cid-qnwxz4mj>
+            <div class="l-wrapper" data-astro-cid-qnwxz4mj>
+                <div class="products__container l-container pt-16 px-12 pb-8 sm:pt-12 sm:px-4 sm:pb-16"
+                    data-astro-cid-qnwxz4mj>
+                    <p class="text-center color-text-sub font-semibold en" data-astro-cid-qnwxz4mj>Products / Service
+                    </p>
+                    <h2 class="products__heading text-center font-bold" data-astro-cid-qnwxz4mj>製品・サービス紹介</h2>
+
+                    <div class="products__card pt-4 font-bold" data-astro-cid-qnwxz4mj>
+                        <div class="card products__card-item products__card-item--01 flex" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/products_service_img_01.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>エネルギーセイバー農業ドローン</p>
+                        </div>
+
+                        <div class="card products__card-item products__card-item--02 flex" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/products_service_img_02.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>プログレッシブハーベストボット</p>
+                        </div>
+                        <div class="card products__card-item products__card-item--03 flex" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/products_service_img_03.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>フューチャーファームマスター</p>
+                        </div>
+
+                        <div class="card products__card-item products__card-item--04 flex" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/products_service_img_04.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>ミラクルグローアシスト</p>
+                        </div>
+
+                        <div class="card products__card-item products__card-item--05 flex" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/products_service_img_05.jpg" alt="" class="card__img"
+                                    data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>インテリジェントプランター</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feature-case" data-astro-cid-jwmtygak>
+            <div class="l-wrapper bg-sub" data-astro-cid-jwmtygak>
+                <div class="feature-case__container l-container py-15 px-3 sm:py-10" data-astro-cid-jwmtygak>
+                    <p class="text-center color-text-sub font-semibold en" data-astro-cid-jwmtygak>Case</p>
+                    <h2 class="feature-case__heading text-center font-bold" data-astro-cid-jwmtygak>お客様の事例紹介</h2>
+
+                    <div class="feature-case__card flex pt-6 sm:pt-4 sm:px-1" data-astro-cid-jwmtygak>
+                        <div class="card feature-case__card-item feature-case__card-item--01" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/case_img_01.jpg" alt="" class="card__img" data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>利用開始後焼く1年で売上が150%増加</p>
+                        </div>
+
+                        <div class="card feature-case__card-item feature-case__card-item--02" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/case_img_02.jpg" alt="" class="card__img" data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>無駄な作業が減り、30%のコストカットに成功</p>
+                        </div>
+
+                        <div class="card feature-case__card-item feature-case__card-item--03" data-astro-cid-dohjnao5>
+                            <div class="img__wrapper" data-astro-cid-dohjnao5>
+                                <img src="/assets/image/case_img_03.jpg" alt="" class="card__img" data-astro-cid-dohjnao5>
+                            </div>
+                            <p class="card__text" data-astro-cid-dohjnao5>24時間対応のサポートデスクがあるのも安心です</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="news l-wrapper items-center pt-0 px-0 pb-16 sm:pt-0 pb-0" data-astro-cid-5kulxhgn>
+            <div class="news__container l-container flex flex-col items-center sm:pt-14" data-astro-cid-5kulxhgn>
+                <p class="text-center color-text-sub font-semibold en" data-astro-cid-5kulxhgn>News</p>
+                <h2 class="news__heading mb-6 font-bold sm:mb-4" data-astro-cid-5kulxhgn>お知らせ</h2>
+
+                <div class="news-list w-full mb-8 sm:mb-6" data-astro-cid-5kulxhgn>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.05.15</div>
+                            <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>都心で発見！キラメキファームの屋上畑で緑のオアシスが広がる
+                        </div>
+                    </div>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.04.05</div>
+                            <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>食の安全を守る！キラメキファーム、農産物の品質管理に力を入れる
+                        </div>
+                    </div>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.03.12</div>
+                            <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>害虫撃退！キラメキファームの自然環境に優しい取り組み</div>
+                    </div>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.02.01</div>
+                            <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキファーム×最新ドローン技術 目覚ましい成果発表</div>
+                    </div>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.01.25</div>
+                            <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキファーム、無農薬野菜で子供たちの未来を支える</div>
+                    </div>
+                    <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0"
+                        data-astro-cid-ioicgfld>
+                        <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
+                            <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.01.08</div>
+                            <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
+                        </div>
+                        <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキ農法で収穫量2倍！革新的な農業技術が話題</div>
+                    </div>
+                </div>
+
+                <a href="/news" class="btn btn--push news__btn"><span data-astro-cid-5kulxhgn="">ニュース一覧へ</span></a>
             </div>
         </div>
-    </div>
-</section>
-    <section class="products" data-astro-cid-qnwxz4mj>
-    <div class="l-wrapper" data-astro-cid-qnwxz4mj>
-        <div class="products__container l-container pt-16 px-12 pb-8 sm:pt-12 sm:px-4 sm:pb-16" data-astro-cid-qnwxz4mj>
-            <p class="text-center color-text-sub font-semibold en" data-astro-cid-qnwxz4mj>Products / Service</p>
-            <h2 class="products__heading text-center font-bold" data-astro-cid-qnwxz4mj>製品・サービス紹介</h2>
 
-            <div class="products__card pt-4 font-bold" data-astro-cid-qnwxz4mj>
-                <div class="card products__card-item products__card-item--01 flex" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/products_service_img_01.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>エネルギーセイバー農業ドローン</p>
-</div>
+    </main>
 
-                <div class="card products__card-item products__card-item--02 flex" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/products_service_img_02.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>プログレッシブハーベストボット</p>
-</div>
-                <div class="card products__card-item products__card-item--03 flex" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/products_service_img_03.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>フューチャーファームマスター</p>
-</div>
-
-                <div class="card products__card-item products__card-item--04 flex" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/products_service_img_04.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>ミラクルグローアシスト</p>
-</div>
-
-                <div class="card products__card-item products__card-item--05 flex" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/products_service_img_05.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>インテリジェントプランター</p>
-</div>
-            </div>
+    <footer class="footer bg-accent" data-astro-cid-sz7xmlte>
+        <div class="footer__inner l-container-full flex items-center justify-center" data-astro-cid-sz7xmlte>
+            <a href="/spec" data-astro-cid-sz7xmlte>
+                <p class="color-white" data-astro-cid-sz7xmlte>価格・スペック</p>
+            </a>
+            <span class="ml-4 mr-4 color-white" data-astro-cid-sz7xmlte>|</span>
+            <a href="/faq" data-astro-cid-sz7xmlte>
+                <p class="color-white" data-astro-cid-sz7xmlte>よくあるご質問</p>
+            </a>
         </div>
-    </div>
-</section>
-    <section class="feature-case" data-astro-cid-jwmtygak>
-    <div class="l-wrapper bg-sub" data-astro-cid-jwmtygak>
-        <div class="feature-case__container l-container py-15 px-3 sm:py-10" data-astro-cid-jwmtygak>
-            <p class="text-center color-text-sub font-semibold en" data-astro-cid-jwmtygak>Case</p>
-            <h2 class="feature-case__heading text-center font-bold" data-astro-cid-jwmtygak>お客様の事例紹介</h2>
+    </footer>
 
-            <div class="feature-case__card flex pt-6 sm:pt-4 sm:px-1" data-astro-cid-jwmtygak>
-                <div class="card feature-case__card-item feature-case__card-item--01" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/case_img_01.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>利用開始後焼く1年で売上が150%増加</p>
-</div>
+    <!-- jQuery & Slick（CDNまたはpublicからの外部ファイル） -->
+    <script src="/assets/scripts/libs/jquery-3.7.1.min.js"></script>
+    <script src="/assets/scripts/libs/slick.min.js"></script>
 
-                <div class="card feature-case__card-item feature-case__card-item--02" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/case_img_02.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>無駄な作業が減り、30%のコストカットに成功</p>
-</div>
+    <!-- 各jsを初期化するmain.jsの読み込み -->
+    <script type="module" src="/assets/scripts/ui/main.js"></script>
+</body>
 
-                <div class="card feature-case__card-item feature-case__card-item--03" data-astro-cid-dohjnao5>
-    <div class="img__wrapper" data-astro-cid-dohjnao5>
-        <img src="/assets/image/case_img_03.jpg" alt class="card__img" data-astro-cid-dohjnao5>
-    </div>
-    <p class="card__text" data-astro-cid-dohjnao5>24時間対応のサポートデスクがあるのも安心です</p>
-</div>
-            </div>
-        </div>
-    </div>
-</section>
-    <div class="news l-wrapper items-center pt-0 px-0 pb-16 sm:pt-0 pb-0" data-astro-cid-5kulxhgn>
-    <div class="news__container l-container flex flex-col items-center sm:pt-14" data-astro-cid-5kulxhgn>
-        <p class="text-center color-text-sub font-semibold en" data-astro-cid-5kulxhgn>News</p>
-        <h2 class="news__heading mb-6 font-bold sm:mb-4" data-astro-cid-5kulxhgn>お知らせ</h2>
-
-        <div class="news-list w-full mb-8 sm:mb-6" data-astro-cid-5kulxhgn>
-            <div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.05.15</div>
-        <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>都心で発見！キラメキファームの屋上畑で緑のオアシスが広がる</div>
-</div><div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.04.05</div>
-        <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>食の安全を守る！キラメキファーム、農産物の品質管理に力を入れる</div>
-</div><div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.03.12</div>
-        <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>害虫撃退！キラメキファームの自然環境に優しい取り組み</div>
-</div><div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.02.01</div>
-        <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキファーム×最新ドローン技術 目覚ましい成果発表</div>
-</div><div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.01.25</div>
-        <span class="news-badge text-center badge--release" data-astro-cid-ioicgfld>ニュースリリース</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキファーム、無農薬野菜で子供たちの未来を支える</div>
-</div><div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:pb-3 sm:px-0" data-astro-cid-ioicgfld>
-    <div class="news-item__inner flex items-center" data-astro-cid-ioicgfld>
-        <div class="news-date font-bold" data-astro-cid-ioicgfld>2023.01.08</div>
-        <span class="news-badge text-center badge--notice" data-astro-cid-ioicgfld>お知らせ</span>
-    </div>
-    <div class="news-title font-bold pl-2" data-astro-cid-ioicgfld>キラメキ農法で収穫量2倍！革新的な農業技術が話題</div>
-</div>
-        </div>
-
-        <a href="/news" class="btn btn--push news__btn"><span data-astro-cid-5kulxhgn="">ニュース一覧へ</span></a>
-    </div>
-</div>
-
-        </main>
-
-        <footer class="footer bg-accent" data-astro-cid-sz7xmlte>
-    <div class="footer__inner l-container-full flex items-center justify-center" data-astro-cid-sz7xmlte>
-        <a href="/spec" data-astro-cid-sz7xmlte><p class="color-white" data-astro-cid-sz7xmlte>価格・スペック</p></a>
-        <span class="ml-4 mr-4 color-white" data-astro-cid-sz7xmlte>|</span>
-        <a href="/faq" data-astro-cid-sz7xmlte><p class="color-white" data-astro-cid-sz7xmlte>よくあるご質問</p></a>
-    </div>
-</footer>
-
-        <!-- jQuery & Slick（CDNまたはpublicからの外部ファイル） -->
-        <script src="/assets/scripts/libs/jquery-3.7.1.min.js"></script>
-        <script src="/assets/scripts/libs/slick.min.js"></script>
-
-        <!-- 各jsを初期化するmain.jsの読み込み -->
-        <script type="module" src="/assets/scripts/ui/main.js"></script>
-    </body>
 </html>
