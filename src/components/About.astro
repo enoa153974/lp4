@@ -14,8 +14,8 @@ const { title, subtitle ,items } = Astro.props as {
 };
 ---
 
-<section id="about" class="about__section l-wrapper">
-    <div class="about__container l-container-full pt-4">
+<section id="about" class="about__section l-wrapper pt-4 pb-4">
+    <div class="about__container l-container-full">
         <p class="text-center color-text-sub font-bold en">{subtitle}</p>
         <h2 class="text-center">
             {title}
@@ -23,11 +23,13 @@ const { title, subtitle ,items } = Astro.props as {
         {
             items.map((item, index) => (
                 <div class="about__item l-inner l-row pt-4">
-                        <div class="item__text l-col py-20 mt-8">
+                        <div class="item__text l-col py-20 mt-6">
                             <p class="lead font-bold mb-8 multi-line-text">{item.pointTitle}</p>
                             <p class="desc">{item.text}</p>
                         </div>
-                    <img src={item.image} alt={item.alt} class="item__img block l-col mb-8" />
+                        <div class="l-col">
+                            <img src={item.image} alt={item.alt} class="item__img block mb-8" />
+                        </div>
                 </div>
             ))
         }
@@ -56,7 +58,6 @@ const { title, subtitle ,items } = Astro.props as {
     }
 
     .item__img {
-        width:40%;
         object-fit: cover;
         border-radius: 50px;
     }

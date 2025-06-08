@@ -21,12 +21,13 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
 
 <style>
     .news-item {
-        gap: 20px;
+        gap: 16px;
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
+        padding: 16px 10px;
     }
     .news-item__inner{
-        width: 30%;
+        width: 25%;
         gap: 1rem;
     }
     .news-date {
@@ -36,7 +37,7 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
     .news-badge {
         display: inline-block;
         font-size: 13px;
-        padding: 6px;
+        padding: 4px;
         border-radius: 4px;
         color: white;
         width: 100%;
@@ -50,6 +51,7 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
     .news-title {
         flex: 1;
         color:var(--text-color-sub);
+        font-size: 15px;
     }
 @media (max-width: 767px) {
     .news-item {
