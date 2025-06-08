@@ -84,7 +84,7 @@
     .slider__wrapper .slick-slide {
         width: auto;
         padding: 0 0;
-        margin-right: 7.5008px;
+        margin-right: 0.4688rem;
         margin-left: 7.5008px;
     }
 
@@ -95,53 +95,11 @@
         margin-top: 25px;
         overflow: visible;
     }
-
-    .card__inner {
-        width: 100%;
-        height: auto;
-        padding: var(--spacing-xs) var(--spacing-sm) var(--spacing-xs) var(--spacing-sm);
-        overflow: hidden;
-        gap: 10px;
+    .slick-slide{
+          border-radius: 30px;
     }
-
-    .card__text {
-        width: 60%;
-    }
-
-    .card {
-        width: 310px;
-        min-width: 310px;
-        min-height: 188px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .card p {
-        margin: 0;
-        margin-bottom: 5px;
-        padding: 10px;
-    }
-
-    .card__text p:nth-of-type(1) {
-        margin-top: 3px;
-        font-size: 16px;
-        padding: 0;
-    }
-
-    .card p:last-child {
-        font-size: 14px;
-        line-height: 1.4;
-        padding: 0;
-        font-weight: var(--font-weight-semibold);
-    }
-
-    .avatar__wrapper {
-        width: 70px;
-        height: 70px;
-    }
-
     .slick-dots {
-        gap: 12.8px;
+        gap: 10px;
         margin-top: 9px;
     }
 }

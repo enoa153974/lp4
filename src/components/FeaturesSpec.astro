@@ -4,9 +4,9 @@ import Card from './Card.astro'
 
 <section class="feature-spec">
     <div class="l-wrapper">
-        <div class="feature-spec__container l-inner pt-6">
-            <h2 class="feature-spec__heading font-bold u-heading-line">特徴</h2>
-            <div class="feature-spec__card flex pt-6">
+        <div class="feature-spec__container l-inner pt-6 sm:py-10">
+            <h2 class="feature-spec__heading font-bold u-heading-line sm:pb-3">特徴</h2>
+            <div class="feature-spec__card flex pt-6 sm:pt-4 sm:px-1">
                 <Card
                     imgSrc="/assets/image/feature_spec_img_01.jpg"
                     alt=""
@@ -51,6 +51,10 @@ import Card from './Card.astro'
     .feature-spec__card{
         flex-direction: column;
     } 
+
+        .feature-spec__heading{
+    font-size: var(--font-size-lg)
+    }
 }
 
 </style>

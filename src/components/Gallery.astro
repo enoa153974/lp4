@@ -11,12 +11,12 @@ interface gallerys {
 const { title, gallerys } = Astro.props as Props;
 ---
 
-<section class="gallery l-wrapper pt-20">
+<section class="gallery l-wrapper pt-12 sm:pt-8">
     <div class="l-container">
 
         <div class="slider l-inner">
             <h2 class="gallery__heading u-heading-line font-bold">{title}</h2>
-            <div class="slider__wrapper flex flex-col pt-8">
+            <div class="slider__wrapper flex flex-col pt-8 sm:pt-0">
 
                 <div class="slider__track autoplay sm:justify-center">
                     {
@@ -39,23 +39,12 @@ const { title, gallerys } = Astro.props as Props;
 
 <style>
     @media screen and (width <=47.9375rem) {
-        .voices {
+        .gallery {
             width: 100%;
-            height: auto;
-            padding-top: 3.125rem;
-            padding-bottom: 0;
         }
-
-        .voices .voices__heading span {
-            font-size: 1.875rem;
-        }
-
-        .voices__heading span:last-child {
-            font-size: 1rem;
-        }
-
-        .voices__slide {
-            max-width: 24.375rem;
+        .gallery__heading{
+            font-size: 22px;
+            padding-bottom: 1rem;
         }
     }
 </style>

@@ -275,4 +275,17 @@
         text-align: left;
     }
 
+    /* 特徴セクションのカードデザイン上書き(SP) */
+
+.card.feature-spec__card-item .card__img {
+    border-radius: 18px;
+}
+.card.feature-spec__card-item .card__text {
+    color: var(--text-color);
+    font-weight: var(--font-weight-bold);
+    font-size:18px;
+    padding: 1rem 0;
+    text-align: left;
+}
+
 }

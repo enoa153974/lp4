@@ -26,21 +26,22 @@
 }
 /* contactセクションのボタン */
 .btn--secondary.contact__btn {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
     color:#fff;
     border: 2px solid #fff;
-    width: 28%;
+    width: 26%;
     height: 80px;
     border-radius: 50px;
     font-size: var(--font-size-lg);
 }
 
 .btn--secondary.contact__btn:hover {
-    background-color: var(--accent-color);
-    color: #fff;
+    background-color:#fff;
+    color: #333;
 }
 
 @media (max-width: 767px) {

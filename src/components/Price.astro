@@ -8,11 +8,11 @@ interface Props {
 const { droneData } = Astro.props;
 ---
 
-<section class="l-wrapper">
-    <div class="l-container pt-10 pb-20">
+<section class="price l-wrapper">
+    <div class="price__container l-container pt-10 px-1 pb-18">
         <div class="l-inner">
             <h2 class="font-bold u-heading-line mb-4">メーカー希望小売価格</h2>
-            <p class="font-bold mb-12">￥550,000<span class="tax-label font-bold">（税込）</span></p>
+            <p class="en font-bold mb-12"><span class="jp font-bold">￥</span>550,000<span class="tax-label font-bold">（税込）</span></p>
             <h2 class="font-bold u-heading-line">スペック</h2>
             <div class="px-8">
                 <h3 class="font-bold u-border-left my-6">機体</h3>
@@ -23,8 +23,11 @@ const { droneData } = Astro.props;
 </section>
 
 <style>
+    .price__container {
+        max-width: 1180px;
+    }
     p{
-        font-size: var(--font-size-lg2);
+        font-size: var(--font-size-xl2);
     }
 
     .tax-label{

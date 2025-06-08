@@ -19,6 +19,8 @@
  * ---------------------------- */
 /* ハンバーガーメニュー */
 @import './components/humburger.css';
+/* パンくずリスト */
+@import './components/breadcrumb.css';
 /* アコーディオンメニューcss */
 @import './components/accordion.css';
 /* スライダー（カルーセル）css */

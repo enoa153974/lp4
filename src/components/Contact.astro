@@ -11,7 +11,7 @@ import Button from "../components/Button";
             >
                 <span>お問い合わせ</span>
             </Button>
-            <img src="/assets/image/contact_img.jpg" alt="" class="mb-auto">
+            <img src="/assets/image/contact_img.jpg" alt="" class="contact__img mb-auto">
         </div>
     </div>
 </section>
@@ -28,6 +28,10 @@ import Button from "../components/Button";
         font-size: var(--font-size-xl2);
         border-top-right-radius:32px;
         border-bottom-left-radius:10px;
+    }
+
+    .contact__img{
+        filter: brightness(60%);
     }
     @media screen and (width <=47.9375rem) {
         .hero {
