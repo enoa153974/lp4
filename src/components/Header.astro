@@ -1,11 +1,12 @@
 ---
+import siteData from '../../siteData.mjs';
 const currentPath = Astro.url.pathname;
 ---
 
 <header class="l-header flex items-center">
     <div class="header__container l-container flex items-center px-6">
         <div class="header__inner flex w-full">
-            <a href="#" class="header__logo block flex items-center"><img src="/assets/image/logo.png" alt="" /></a>
+            <a href="/" class="header__logo block flex items-center"><img src="/assets/image/logo.png" alt="" /></a>
 
             <!-- ハンバーガーボタン（SP用） -->
             <button class="hamburger openbtn" aria-label="メニューを開く">
@@ -17,10 +18,10 @@ const currentPath = Astro.url.pathname;
             <nav class="header__nav pc-nav">
                 <ul class="header__nav-inner flex items-center font-bold">
                     <li>
-                        <a href="/spec" class={currentPath === '/spec' ? 'is-active' : ''}>価格・スペック</a>
+                        <a  href={siteData.spec.path} class={currentPath === '/spec' ? 'is-active' : ''}>価格・スペック</a>
                     </li>
                     <li>
-                        <a href="/faq" class={currentPath === '/faq' ? 'is-active' : ''}>よくあるご質問</a>
+                        <a  href={siteData.faq.path} class={currentPath === '/faq' ? 'is-active' : ''}>よくあるご質問</a>
                     </li>
                 </ul>
             </nav>
@@ -29,8 +30,8 @@ const currentPath = Astro.url.pathname;
             <nav id="global-nav" class="sp-nav font-bold">
                 <ul>
                     <li><a href="/">トップ</a></li>
-                    <li><a href="/src/pages/spec.astro">価格・スペック</a></li>
-                    <li><a href="/src/pages/faq.astro">よくあるご質問</a></li>
+                    <li><a href={siteData.spec.path}>価格・スペック</a></li>
+                    <li><a href={siteData.faq.path}>よくあるご質問</a></li>
                 </ul>
             </nav>
         </div>
