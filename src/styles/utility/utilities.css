@@ -436,7 +436,6 @@
     padding-bottom: 3.75rem;
 }
 
-
 .pt-16 {
     padding-top: 4rem;
 }
@@ -462,7 +461,6 @@
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
-
 
 .pt-18 {
     padding-top: 4.5rem;
@@ -768,7 +766,7 @@
 }
 
 .u-heading-line::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -779,7 +777,7 @@
 }
 
 .u-heading-line::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -838,7 +836,6 @@
         margin-top: 0;
         margin-bottom: 0;
     }
-
 
     .sm\:mt-1 {
         margin-top: 4px;
@@ -988,7 +985,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-
 
     /* === 余白系（padding） === */
 
@@ -1310,7 +1306,6 @@
             padding-bottom: 3.75rem;
         }
     }
-
 
     .sm\:pt-16 {
         padding-top: 4rem;

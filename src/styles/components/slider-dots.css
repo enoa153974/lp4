@@ -1,10 +1,10 @@
 /* スライダーcssの読み込み */
 .slider {
     position: relative;
-    width: 100%;   
+    width: 100%;
     max-width: 800px;
     padding: 0;
-    }
+}
 
 .slick-slide {
     padding: 0;
@@ -12,7 +12,7 @@
 }
 
 .slider__wrapper {
-    width:100%;
+    width: 100%;
     height: auto;
     overflow: hidden;
 }
@@ -53,7 +53,7 @@
     line-height: 0;
     appearance: none;
     cursor: pointer;
-    background-color:#eee;
+    background-color: #eee;
     border: none;
     border-radius: 50%;
     transition: background-color 0.3s ease;
@@ -95,8 +95,8 @@
         margin-top: 25px;
         overflow: visible;
     }
-    .slick-slide{
-          border-radius: 30px;
+    .slick-slide {
+        border-radius: 30px;
     }
     .slick-dots {
         gap: 10px;

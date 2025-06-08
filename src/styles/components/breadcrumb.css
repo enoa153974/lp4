@@ -11,8 +11,8 @@
     margin: 0;
 }
 
-.breadcrumb li+li::before {
-    content: "＞";
+.breadcrumb li + li::before {
+    content: '＞';
     margin: 0 0.5em;
     color: #666;
 }
@@ -23,6 +23,6 @@
     font-weight: normal;
 }
 
-.breadcrumb [aria-current="page"] {
+.breadcrumb [aria-current='page'] {
     font-weight: bold;
 }

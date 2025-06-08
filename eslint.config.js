@@ -4,13 +4,11 @@ import eslintPluginAstro from 'eslint-plugin-astro';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import typescriptEslintParser from '@typescript-eslint/parser';
 import typescriptEslint from 'typescript-eslint';
-import pluginVue from 'eslint-plugin-vue';
 
 export default [
     js.configs.recommended,
     ...typescriptEslint.configs.recommended,
     ...eslintPluginAstro.configs['flat/recommended'],
-    ...pluginVue.configs['flat/recommended'],
     eslintConfigPrettier,
     {
         files: ['./src/**/*.tsx', './src/**/*.ts', './src/**/*.vue'],
