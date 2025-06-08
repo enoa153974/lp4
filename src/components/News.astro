@@ -19,12 +19,12 @@ interface Props {
 const { text, subtitle ,newsItems, buttonHref } = Astro.props;
 ---
 
-<div class="news l-wrapper items-center">
-    <div class="news__container l-container flex flex-col items-center">
+<div class="news l-wrapper items-center pt-12 px-0 pb-16 sm:pt-0 pb-0">
+    <div class="news__container l-container flex flex-col items-center sm:pt-14">
         <p class="text-center color-text-sub font-bold en">{subtitle}</p>
-        <h2 class="mb-6 font-bold">{text}</h2>
+        <h2 class="news__heading mb-6 font-bold sm:mb-4">{text}</h2>
 
-        <div class="news-list w-full mb-8">
+        <div class="news-list w-full mb-8 sm:mb-6">
             {newsItems.map((item) => <NewsItem {...item} />)}
         </div>
 
@@ -37,7 +37,6 @@ const { text, subtitle ,newsItems, buttonHref } = Astro.props;
 <style>
     .news {
         height: auto;
-        padding: 3rem 0 4rem;
     }
     .news-list {
         width: 100%;
@@ -52,7 +51,14 @@ const { text, subtitle ,newsItems, buttonHref } = Astro.props;
     @media screen and (max-width: 767px) {
         .news {
             height: auto;
-            padding: 24px 0;
         }
+
+            .news__container>p{
+           font-size: 1rem;
+    }
+    
+    .news__heading{
+    font-size: var(--font-size-lg)
+    }
     }
 </style>

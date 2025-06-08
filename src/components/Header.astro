@@ -2,25 +2,31 @@
 
 ---
 
-<header class="l-header flex items-fenter">
-    <div class="l-container flex items-fenter px-6">
+<header class="l-header flex items-center">
+    <div class="header__container l-container flex items-center px-6">
         <div class="header__inner flex w-full">
-            <a href="#" class="header__logo block flex items-center" ><img src="/assets/image/logo.png" alt=""/></a>
+            <a href="#" class="header__logo block flex items-center"><img src="/assets/image/logo.png" alt="" /></a>
 
             <!-- ハンバーガーボタン（SP用） -->
-            <button class="hamburger" aria-label="メニューを開く">
+            <button class="hamburger openbtn" aria-label="メニューを開く">
                 <span></span><span></span><span></span>
             </button>
 
             <!-- メニュー -->
-            <nav class="header__nav">
+            <!-- PCナビ -->
+            <nav class="header__nav pc-nav">
                 <ul class="header__nav-inner flex items-center">
-                    <li>
-                        <a href="/src/pages/spec.astro" class="font-bold">価格・スペック</a>
-                    </li>
-                    <li>
-                        <a href="/src/pages/faq.astro" class="font-bold">よくあるご質問</a>
-                    </li>
+                    <li><a href="/src/pages/spec.astro">価格・スペック</a></li>
+                    <li><a href="/src/pages/faq.astro">よくあるご質問</a></li>
+                </ul>
+            </nav>
+
+            <!-- スマホナビ -->
+            <nav id="global-nav" class="sp-nav">
+                <ul>
+                    <li><a href="/">トップ</a></li>
+                    <li><a href="/src/pages/spec.astro">価格・スペック</a></li>
+                    <li><a href="/src/pages/faq.astro">よくあるご質問</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,19 +34,57 @@
 </header>
 
 <style>
-    .l-header{
+    .l-header {
         height: var(--header-height);
     }
 
-    .header__logo img{
+    .header__logo img {
         width: 50%;
     }
-    .header__nav{
+
+    .sp-nav {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    .header__nav {
         margin-left: auto;
     }
-    .header__nav-inner{
+    .header__nav-inner {
         width: 100%;
         height: 100%;
         gap: 2rem;
+    }
+
+    @media (max-width: 47.9375rem) {
+        .l-header {
+            height: var(--sp-header-height);
+        }
+
+        .header__container {
+            padding: 0;
+        }
+
+        .header__inner {
+            padding: 0.75rem 0 0.75rem 1rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        
+    .header__logo img {
+        width: 60%;
+    }
+
+        .sp-nav {
+            display: block;
+        }
+        .hamburger {
+            display: inline-block;
+        }
+        .header__nav {
+            display: none;
+        }
     }
 </style>

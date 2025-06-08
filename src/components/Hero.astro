@@ -1,17 +1,19 @@
 <section class="hero">
     <div class="l-wrapper">
-        <div class="l-container py-10 px-4">
-            <div class="hero__text l-row mb-16 px-6 sm:flex-col">
+        <div class="l-container py-10 px-4 sm:py-3 sm:px-4">
+            <div class="hero__text l-row mb-16 px-6 sm:flex-col sm:px-0 sm:mb-6">
                 <div class="l-col font-bold">
-                    <h1>
-                        持続可能な農業を目指す
-                    </h1>
+                    <h1>持続可能な農業を目指す</h1>
                 </div>
-                <div class="l-col font-bold pt-1 pl-6">
-                    <p>キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。</p>
+                <div class="l-col font-bold pt-1 pl-6 sm:pt-0 sm:px-0">
+                    <p>
+                        キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。
+                    </p>
                 </div>
             </div>
-            <img src="/assets/image/hero_top_main.jpg" alt="" class="">
+            <div class="hero__img-wrapper">
+                <img src="/assets/image/hero_top_main.jpg" alt="" class="hero__img" />
+            </div>
         </div>
     </div>
 </section>
@@ -19,19 +21,40 @@
 <style>
     .hero {
         width: 100%;
-
     }
-    .hero__text{
-        gap:20px;
+    .hero__text {
+        gap: 20px;
     }
-    .hero__text h1{
+    .hero__text h1 {
         font-size: clamp(24px, 2.86vw, 40px);
     }
     .hero__text p {
-        font-size:15px;
+        font-size: 15px;
         line-height: 1.8;
     }
-    @media screen and (width <=47.9375rem) {
+    @media (max-width: 47.9375rem) {
+        .hero__text h1 {
+            font-size: 1.75rem;
+        }
+        .hero__text {
+            gap: 18px;
+        }
+        .hero__text p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .hero__img-wrapper {
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 50px;
+        }
 
+        .hero__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05) translateX(1%) translateY(2%);
+        }
     }
 </style>

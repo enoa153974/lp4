@@ -10,7 +10,7 @@ const { date, category, title } = Astro.props;
 const categoryClass = category === 'ニュースリリース' ? 'badge--release' : 'badge--notice';
 ---
 
-<div class="news-item flex items-center py-4">
+<div class="news-item flex items-center pt-4 px-2 pb-4 sm:pt-3 sm:px-0">
     <div class="news-item__inner flex items-center">
         <div class="news-date font-bold">{date}</div>
         <span class={`news-badge text-center ${categoryClass}`}>{category}</span>
@@ -24,7 +24,6 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
         gap: 16px;
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
-        padding: 16px 10px;
     }
     .news-item__inner{
         width: 25%;
@@ -64,8 +63,7 @@ const categoryClass = category === 'ニュースリリース' ? 'badge--release'
         width: 100%;
     }
     .news-badge  {
-        width:35%;
-        margin-left: 0.75rem;
+        width:37%;
     }
     .news-title {
         padding: 0;

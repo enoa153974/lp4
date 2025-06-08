@@ -4,30 +4,30 @@ import Card from './Card.astro'
 
 <section class="feature">
     <div class="l-wrapper bg-sub">
-        <div class="feature__container l-container">
+        <div class="feature__container l-container py-16 px-4 sm:py-12">
             <p class="text-center color-text-sub font-bold en">Features</p>
             <h2 class="feature__heading text-center font-bold">私たちが選ばれる3つの理由</h2>
             
-            <div class="feature__card flex pt-6 font-bold">
+            <div class="feature__card flex pt-6 font-bold sm:pt-4">
                 <Card
                     imgSrc="/assets/image/feature_img_01.jpg"
                     alt=""
                     text="農業の未来と革新的デザイン性で最新鋭の機能を完備"
-                    className="feature__card-item"
+                    className="feature__card-item feature__card-item--01"
                 />
 
                 <Card
                     imgSrc="/assets/image/feature_img_02.jpg"
                     alt=""
                     text="ビッグデータを駆使して、省電力・効率化を実現"
-                    className="feature__card-item"
+                    className="feature__card-item feature__card-item--02"
                 />
 
                 <Card
                     imgSrc="/assets/image/feature_img_03.jpg"
                     alt=""
                     text="自動運転技術を搭載したロボットで一年中稼働することができる"
-                    className="feature__card-item"
+                    className="feature__card-item feature__card-item--03"
                 />
             </div>
         </div>
@@ -35,9 +35,6 @@ import Card from './Card.astro'
 </section>
 
 <style>
-    .feature__container{
-        padding:3.75rem 0.75rem;
-    }
     .feature__container>p{
         font-size: 20px;
     }
@@ -45,8 +42,17 @@ import Card from './Card.astro'
         gap: 2rem;
 }
 @media screen and (max-width: 767px) {
+
+    .feature__container>p{
+           font-size: 1rem;
+    }
+
+    .feature__heading{
+    font-size: var(--font-size-lg)
+    }
     .feature__card{
         flex-direction: column;
-    }
+        gap: 1.3rem;
+}
 }
 </style>

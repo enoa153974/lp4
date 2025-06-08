@@ -1,13 +1,13 @@
 ---
-import Card from './Card.astro'
+import Card from './Card.astro';
 ---
 
 <section class="products">
     <div class="l-wrapper">
-        <div class="products__container l-container">
+        <div class="products__container l-container pt-16 px-12 pb-8 sm:pt-12 sm:px-4 sm:pb-16">
             <p class="text-center color-text-sub font-bold en">Products / Service</p>
             <h2 class="products__heading text-center font-bold">製品・サービス紹介</h2>
-            
+
             <div class="products__card pt-6">
                 <Card
                     imgSrc="/assets/image/products_service_img_01.jpg"
@@ -48,15 +48,16 @@ import Card from './Card.astro'
 </section>
 
 <style>
-    .products__container{
-        padding:4rem 3rem 2rem 3rem;
-    }
-    .products__container>p{
+    .products__container > p {
         font-size: 20px;
     }
     @media screen and (max-width: 767px) {
-    .products__container{
-        padding:3rem 1rem ;
-    }
+        .products__container > p {
+            font-size: 1rem;
+        }
+
+            .products__heading {
+            font-size: var(--font-size-lg);
+        }
     }
 </style>

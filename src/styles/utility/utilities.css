@@ -410,6 +410,32 @@
     padding-bottom: 3.5rem;
 }
 
+.pt-15 {
+    padding-top: 3.75rem;
+}
+
+.pr-15 {
+    padding-right: 3.75rem;
+}
+
+.pb-15 {
+    padding-bottom: 3.75rem;
+}
+
+.pl-15 {
+    padding-left: 3.75rem;
+}
+
+.px-15 {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+}
+
+.py-15 {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
 
 .pt-16 {
     padding-top: 4rem;
@@ -731,14 +757,14 @@
     clear: both;
 }
 
-    .multi-line-text {
-        white-space: pre-line;
-    }
+.multi-line-text {
+    white-space: pre-line;
+}
+
 /* === heading-line === */
 .u-heading-line {
     position: relative;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .u-heading-line::before {
@@ -781,6 +807,38 @@
     /* ブレイクポイント767px */
 
     /* === 余白系（margin） === */
+
+    /* === スマホ用 Margin 0 === */
+    .sm\:m-0 {
+        margin: 0;
+    }
+
+    .sm\:mt-0 {
+        margin-top: 0;
+    }
+
+    .sm\:mr-0 {
+        margin-right: 0;
+    }
+
+    .sm\:mb-0 {
+        margin-bottom: 0;
+    }
+
+    .sm\:ml-0 {
+        margin-left: 0;
+    }
+
+    .sm\:mx-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sm\:my-0 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 
     .sm\:mt-1 {
         margin-top: 4px;
@@ -846,7 +904,125 @@
         margin-left: 24px;
     }
 
+    .sm\:mt-8 {
+        margin-top: 2rem;
+    }
+
+    .sm\:mr-8 {
+        margin-right: 2rem;
+    }
+
+    .sm\:mb-8 {
+        margin-bottom: 2rem;
+    }
+
+    .sm\:ml-8 {
+        margin-left: 2rem;
+    }
+
+    .sm\:mt-10 {
+        margin-top: 2.5rem;
+    }
+
+    .sm\:mr-10 {
+        margin-right: 2.5rem;
+    }
+
+    .sm\:mb-10 {
+        margin-bottom: 2.5rem;
+    }
+
+    .sm\:ml-10 {
+        margin-left: 2.5rem;
+    }
+
+    .sm\:mt-12 {
+        margin-top: 3rem;
+    }
+
+    .sm\:mr-12 {
+        margin-right: 3rem;
+    }
+
+    .sm\:mb-12 {
+        margin-bottom: 3rem;
+    }
+
+    .sm\:ml-12 {
+        margin-left: 3rem;
+    }
+
+    .sm\:mt-16 {
+        margin-top: 4rem;
+    }
+
+    .sm\:mr-16 {
+        margin-right: 4rem;
+    }
+
+    .sm\:mb-16 {
+        margin-bottom: 4rem;
+    }
+
+    .sm\:ml-16 {
+        margin-left: 4rem;
+    }
+
+    .sm\:mt-20 {
+        margin-top: 5rem;
+    }
+
+    .sm\:mr-20 {
+        margin-right: 5rem;
+    }
+
+    .sm\:mb-20 {
+        margin-bottom: 5rem;
+    }
+
+    .sm\:ml-20 {
+        margin-left: 5rem;
+    }
+
+    .sm\:mb-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     /* === 余白系（padding） === */
+
+    /* === スマホ用 Padding 0 === */
+    .sm\:p-0 {
+        padding: 0;
+    }
+
+    .sm\:pt-0 {
+        padding-top: 0;
+    }
+
+    .sm\:pr-0 {
+        padding-right: 0;
+    }
+
+    .sm\:pb-0 {
+        padding-bottom: 0;
+    }
+
+    .sm\:pl-0 {
+        padding-left: 0;
+    }
+
+    .sm\:px-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sm\:py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .sm\:pt-1 {
         padding-top: 4px;
     }
@@ -1003,6 +1179,217 @@
         padding-bottom: 24px;
     }
 
+    .sm\:pt-8 {
+        padding-top: 2rem;
+    }
+
+    .sm\:pb-8 {
+        padding-bottom: 2rem;
+    }
+
+    .sm\:pl-8 {
+        padding-left: 2rem;
+    }
+
+    .sm\:pr-8 {
+        padding-right: 2rem;
+    }
+
+    .sm\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .sm\:py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .sm\:pt-10 {
+        padding-top: 2.5rem;
+    }
+
+    .sm\:pb-10 {
+        padding-bottom: 2.5rem;
+    }
+
+    .sm\:pl-10 {
+        padding-left: 2.5rem;
+    }
+
+    .sm\:pr-10 {
+        padding-right: 2.5rem;
+    }
+
+    .sm\:px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .sm\:py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .sm\:pt-12 {
+        padding-top: 3rem;
+    }
+
+    .sm\:pb-12 {
+        padding-bottom: 3rem;
+    }
+
+    .sm\:pl-12 {
+        padding-left: 3rem;
+    }
+
+    .sm\:pr-12 {
+        padding-right: 3rem;
+    }
+
+    .sm\:px-12 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .sm\:py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .sm\:pt-14 {
+        padding-top: 3.5rem;
+    }
+
+    .sm\:pb-14 {
+        padding-bottom: 3.5rem;
+    }
+
+    .sm\:pl-14 {
+        padding-left: 3.5rem;
+    }
+
+    .sm\:pr-14 {
+        padding-right: 3.5rem;
+    }
+
+    .sm\:px-14 {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .sm\:py-14 {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        .sm\:pt-15 {
+            padding-top: 3.75rem;
+        }
+
+        .sm\:pr-15 {
+            padding-right: 3.75rem;
+        }
+
+        .sm\:pb-15 {
+            padding-bottom: 3.75rem;
+        }
+
+        .sm\:pl-15 {
+            padding-left: 3.75rem;
+        }
+
+        .sm\:px-15 {
+            padding-left: 3.75rem;
+            padding-right: 3.75rem;
+        }
+
+        .sm\:py-15 {
+            padding-top: 3.75rem;
+            padding-bottom: 3.75rem;
+        }
+    }
+
+
+    .sm\:pt-16 {
+        padding-top: 4rem;
+    }
+
+    .sm\:pb-16 {
+        padding-bottom: 4rem;
+    }
+
+    .sm\:pl-16 {
+        padding-left: 4rem;
+    }
+
+    .sm\:pr-16 {
+        padding-right: 4rem;
+    }
+
+    .sm\:px-16 {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .sm\:py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .sm\:pt-18 {
+        padding-top: 4.5rem;
+    }
+
+    .sm\:pb-18 {
+        padding-bottom: 4.5rem;
+    }
+
+    .sm\:pl-18 {
+        padding-left: 4.5rem;
+    }
+
+    .sm\:pr-18 {
+        padding-right: 4.5rem;
+    }
+
+    .sm\:px-18 {
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+
+    .sm\:py-18 {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .sm\:pt-20 {
+        padding-top: 5rem;
+    }
+
+    .sm\:pb-20 {
+        padding-bottom: 5rem;
+    }
+
+    .sm\:pl-20 {
+        padding-left: 5rem;
+    }
+
+    .sm\:pr-20 {
+        padding-right: 5rem;
+    }
+
+    .sm\:px-20 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .sm\:py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
     /* === 幅・表示 === */
     .sm\:w-full {
         width: 100%;
@@ -1057,7 +1444,7 @@
         justify-content: flex-end;
     }
 
-  /* === position系 ===  */
+    /* === position系 ===  */
     .sm\:position-relative {
         position: relative;
     }
@@ -1109,5 +1496,14 @@
 
     .sm\:font-bold {
         font-weight: var(--font-weight-bold);
+    }
+
+    /* 改行 */
+    .sm\:normal {
+        white-space: normal;
+    }
+
+    .sm\:pre-line {
+        white-space: pre-line;
     }
 }
