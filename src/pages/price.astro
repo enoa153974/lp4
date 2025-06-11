@@ -4,10 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSpec from '../components/HeroSpec.astro';
 import Gallery from '../components/Gallery.astro';
 import FeaturesSpec from '../components/FeaturesSpec.astro';
-import Price from '../components/Price.astro';
+import Pricetable from '../components/Pricetable.astro';
 import Contact from '../components/Contact.astro';
 
-const pageId = 'spec',
+const pageId = 'price',
     pageMeta = siteData[pageId],
     ldJSON = [
         {
@@ -15,23 +15,30 @@ const pageId = 'spec',
             position: 2,
             item: {
                 '@id': `${import.meta.env.PUBLIC_ENVURL}${pageMeta.path}`,
-                name: 'spec'
+                name: 'price'
             }
         }
     ];
 
-const currentPath = '/spec'; 
-
+const currentPath = '/price';
 //表の配列
-const droneData = [
-    { heading: 'ドローン名', text: 'アグリ・ファルコン' },
-    { heading: '製品番号', text: 'AGF-100' },
-    { heading: '飛行時間', text: '60 分' },
-    { heading: '最大積載量', text: '5 kg' },
-    { heading: '操作距離', text: '3 km' },
-    { heading: '機体重量', text: '8 kg' },
-    { heading: '機体寸法', text: '150 x 150 x 40 cm' },
-    { heading: '機能・特徴', text: '自動操縦、植物生育モニタリング、農薬散布' }
+const tableData = [
+    [
+        { heading: 'ドローン名', text: 'アグリ・ファルコン' },
+        { heading: '製品番号', text: 'AGF-100' }
+    ],
+    [
+        { heading: '飛行時間', text: '60 分' },
+        { heading: '最大積載量', text: '5 kg' }
+    ],
+    [
+        { heading: '操作距離', text: '3 km' },
+        { heading: '機体重量', text: '8 kg' }
+    ],
+    [
+        { heading: '機体寸法', text: '150 x 150 x 40 cm' },
+        { heading: '機能・特徴', text: '自動操縦、植物生育モニタリング、農薬散布' }
+    ]
 ];
 ---
 
@@ -65,6 +72,6 @@ const droneData = [
         ]}
     />
     <FeaturesSpec />
-    <Price droneData={droneData} />
+    <Pricetable tableData={tableData} />
     <Contact />
 </BaseLayout>

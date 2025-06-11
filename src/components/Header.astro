@@ -18,7 +18,7 @@ const { currentPath } = Astro.props;
             <nav class="header__nav pc-nav">
                 <ul class="header__nav-inner flex items-center font-bold">
                     <li>
-                        <a href={siteData.spec.path} class={currentPath === '/spec' ? 'is-active' : ''}
+                        <a href={siteData.price.path} class={currentPath === '/price' ? 'is-active' : ''}
                             >価格・スペック</a
                         >
                     </li>
@@ -32,7 +32,7 @@ const { currentPath } = Astro.props;
             <nav id="global-nav" class="sp-nav font-bold">
                 <ul>
                     <li><a href="/">トップ</a></li>
-                    <li><a href={siteData.spec.path}>価格・スペック</a></li>
+                    <li><a href={siteData.price.path}>価格・スペック</a></li>
                     <li><a href={siteData.faq.path}>よくあるご質問</a></li>
                 </ul>
             </nav>

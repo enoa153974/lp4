@@ -68,7 +68,10 @@
     display: none;
     content: none;
 }
-
+/* gifエラー回避用 */
+.slick-loading .slick-list {
+    background: none !important;
+}
 /* レスポンシブ対応（1枚表示） */
 @media (width <=767px) {
     /* ブレイクポイント767px */

@@ -1,11 +1,15 @@
 ---
 import Table from './Table.astro';
 
-interface Props {
-    droneData: { heading: string; text: string }[];
+interface TableRow {
+    heading: string;
+    text: string;
 }
 
-const { droneData } = Astro.props;
+interface Props {
+    tableData: TableRow[][]; // ←ここを修正
+}
+const { tableData } = Astro.props;
 ---
 
 <section class="price l-wrapper">
@@ -18,7 +22,7 @@ const { droneData } = Astro.props;
             <h2 class="font-bold u-heading-line sm:pb-2">スペック</h2>
             <div class="px-8 sm:px-1">
                 <h3 class="font-bold u-border-left sm:my-4">機体</h3>
-                <Table tableData={droneData} />
+                <Table tableData={tableData} />
             </div>
         </div>
     </div>
