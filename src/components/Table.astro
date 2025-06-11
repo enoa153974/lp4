@@ -18,8 +18,8 @@ const { tableData, className = '' } = Astro.props;
             <tbody>
                 {group.map((row) => (
                     <tr>
-                        <th class="py-5 px-5">{row.heading}</th>
-                        <td class="py-5 px-5">{row.text}</td>
+                        <th class="py-5 px-5 font-bold">{row.heading}</th>
+                        <td class="py-5 px-5 font-semibold">{row.text}</td>
                     </tr>
                 ))}
             </tbody>
@@ -32,7 +32,6 @@ const { tableData, className = '' } = Astro.props;
         border-collapse: collapse;
         width: 100%;
         font-size: 0.95rem;
-        font-weight: var(--font-weight-bold);
     }
 
     .product-table th,
